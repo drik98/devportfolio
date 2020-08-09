@@ -17,10 +17,10 @@
     width: 10%;
     min-height: 100%;
     margin-right: 20px;
+    min-width: 50px;
 }
 
 .education-block-image > img{
-    height:100%;
     width: 100%;
 }
 
@@ -47,9 +47,18 @@
 }
 
 .project-logo-link {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .project-logo-image {
     height: 30px;
+}
+
+@media (max-width : 480px) {
+    .vtimeline-content h3 {
+        font-size: 1.3em;
+    }
+    .project-logos {
+        flex-direction: column;
+    }
 }
