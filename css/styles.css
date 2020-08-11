@@ -37,7 +37,7 @@
 
 .project-image > img {
     height: 100%;
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.15) rotate(4deg);
 }
 
 .project-logos {
