@@ -15,8 +15,8 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
-    // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+    // Animate to section when nav is clicked, or when a link has class "scroll-link"
+    $('header a, a.scroll-link').click(function(e) {
 
         // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
