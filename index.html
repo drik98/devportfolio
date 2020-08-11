@@ -74,7 +74,17 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Mein Name ist Hendrik Schmitz. Ich bin 22 Jahre alt komme aus Aachen und lebe derzeit in
+                        Mein Name ist Hendrik Schmitz. Ich bin
+                        <script type="text/javascript">
+                            // caculate current age and output to page
+                            var birthDate = new Date("1998-06-30");
+                            var currentDate = Date.now();
+                            var difference = currentDate - birthDate;
+                            var ageDate = new Date(difference);
+                            var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+                            document.write(age);
+                        </script>
+                        Jahre alt komme aus Aachen und lebe derzeit in
                         Würselen. Ich habe den Dualen Studiengang
                         <a href="https://www.fh-aachen.de/studium/angewandte-mathematik-und-informatik-bsc/">Scientific
                             Programming</a> absolviert und somit
@@ -94,7 +104,7 @@
                         Begeisterung für das Programmieren erwischt. Zunächst ging es nur um die Konfiguration von
                         Multiplayer-Servern, später dann um die ersten kleinen
                         Modifikationen des Java-Source-Codes. Daher wusste ich schon relativ früh, in welche Richtung
-                        meine berufliche Laufbahn gesehen soll.
+                        meine berufliche Laufbahn gehen soll.
                     </p>
                     <br>
                     <p>
@@ -103,7 +113,7 @@
                         das duale Studium zum MATSE antreten will. Während des Studiums wurden aus den Grundkenntnissen
                         von Java ein breites Wissen der Softwareentwicklung.
                         Neben dem Back-End lernte ich auch das moderne Front-End kennen, welches schnell zu meinem
-                        Hauptinteresse wurde. Deswegen hatte ich beschlossen
+                        Hauptinteresse wurde. Deshalb hatte ich beschlossen
                         mich mit dem Framework React vertraut zu machen und <a href="#project-cookbook"
                             class="scroll-link">meine erste React-Anwendung</a> zu
                         programmieren. Deswegen ist es mir wichtig, dass meine neue
@@ -115,7 +125,7 @@
                         In meiner Freizeit verbringe ich möglichst viel Zeit im Freien. Dabei gehe ich gerne Wandern,
                         egal ob Waldspaziergang
                         oder um die Alpen zu erklimmen. Zudem fahre ich gerne Fahrrad, am liebsten mit mehreren
-                        Begeleitern. Nicht nur weil es mir Spaß macht,
+                        Begleitern. Nicht nur weil es mir Spaß macht,
                         sondern auch um unnötige Fahrten mit dem Auto zu vermeiden. Außerdem bin ich sehr Fußball
                         begeistert. Ich bin gerne im Stadion und feuere
                         die Profis an oder versuche selber mein Können auf dem Platz zu zeigen. Neben dem Sport sind mir
@@ -266,7 +276,8 @@
                                     class="project-logo-image" src="images/vba-logo.jpg" alt="VBA" /></a>
                             <a class="project-logo-link"
                                 href="https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software"><img
-                                    class="project-logo-image" src="images/2000px-Microsoft_Office_Visio_(2019).svg.png" alt="Visio" /></a>
+                                    class="project-logo-image" src="images/2000px-Microsoft_Office_Visio_(2019).svg.png"
+                                    alt="Visio" /></a>
                         </div>
                         <a href="http://www.aixperanto.de/" target="_blank">Projekt-Website</a>
                     </div>
