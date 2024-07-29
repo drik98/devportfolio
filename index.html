@@ -1,543 +1,823 @@
 <!DOCTYPE html>
 <html class="no-js" lang="de">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hendrik Schmitz | Mein Portfolio</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
     <header>
-        <div id="mobile-menu-close">
-            <span>Schließen</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">Über mich</a>
-            </li>
-            <li>
-                <a href="#experience">Beruflicher Werdegang</a>
-            </li>
-            <li>
-                <a href="#education">Ausbildung</a>
-            </li>
-            <li>
-                <a href="#projects">Projekte</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Kontakt</a>
-            </li>
-        </ul>
+      <div id="mobile-menu-close">
+        <span>Schließen</span> <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <ul id="menu" class="shadow">
+        <li>
+          <a href="#about">Über mich</a>
+        </li>
+        <li>
+          <a href="#experience">Beruflicher Werdegang</a>
+        </li>
+        <li>
+          <a href="#education">Ausbildung</a>
+        </li>
+        <li>
+          <a href="#projects">Projekte</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt</a>
+        </li>
+      </ul>
     </header>
     <!-- End header -->
 
     <div id="lead">
-        <div id="lead-content">
-            <h1>Hendrik Schmitz</h1>
-            <h2>Softwareentwickler</h2>
-              <a href="contents/cv-hendrik-schmitz.pdf" download="cv-hendrik-schmitz.pdf" class="btn-rounded-white">Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
+      <div id="lead-content">
+        <h1>Hendrik Schmitz</h1>
+        <h2>Softwareentwickler</h2>
+        <a
+          href="contents/cv_hendrik_schmitz_de.pdf"
+          download="cv-hendrik-schmitz.pdf"
+          class="btn-rounded-white"
+          >Download CV</a
+        >
+      </div>
+      <!-- End #lead-content -->
 
-        <div id="lead-overlay"></div>
+      <div id="lead-overlay"></div>
 
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
+      <div id="lead-down">
+        <span>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </span>
+      </div>
+      <!-- End #lead-down -->
     </div>
     <!-- End #lead -->
 
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">Über mich</h2>
-                    <img class="profile-picture" src="images/profile_picture.jpg" alt="Hendrik Schmitz" />
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Mein Name ist Hendrik Schmitz. Ich bin
-                        <script type="text/javascript">
-                            // caculate current age and output to page
-                            var birthDate = new Date("1998-06-30");
-                            var currentDate = Date.now();
-                            var difference = currentDate - birthDate;
-                            var ageDate = new Date(difference);
-                            var age = Math.abs(ageDate.getUTCFullYear() - 1970);
-                            document.write(age);
-                        </script>
-                        Jahre alt komme aus Aachen und lebe dort auch derzeit. Ich habe
-                        den Dualen Studiengang
-                        <a href="https://www.fh-aachen.de/studium/angewandte-mathematik-und-informatik-bsc/">Scientific
-                            Programming</a>
-                        absolviert und somit meinen Bachelor of Science an der
-                        <a href="https://www.fh-aachen.de/">FH Aachen</a> erworben und
-                        meine Ausbildung zum
-                        <a href="https://www.matse-ausbildung.de/">Mathematisch technischen Softwareentwickler</a>
-                        beim
-                        <a href="https://www.wzl.rwth-aachen.de/">Werkzeugmaschinenlabor WZL der RWTH Aachen</a>
-                        abgeschlossen. Seit Dezember 2020 bin ich Softwareentwickler bei
-                        <a href="https://www.aixigo.com/de">aixigo</a>
-                        und arbeite hauptsächlich am Front-end mit vue.js.
-                    </p>
-                    <br />
-                    <p>
-                        Schon als kleiner Junge war ich sehr begeistert von Computern und
-                        deren Funktionsweise. Ich hab früh damit angefangen selber
-                        Computer für mich und meine Freunde zusammenzustellen und
-                        aufzubauen. Als wir dann auf den PCs zusammen Minecraft gespielt
-                        haben, hat mich dann das erste Mal die Begeisterung für das
-                        Programmieren erwischt. Zunächst ging es nur um die Konfiguration
-                        von Multiplayer-Servern, später dann um die ersten kleinen
-                        Modifikationen des Java-Source-Codes. Daher wusste ich schon
-                        relativ früh, in welche Richtung meine berufliche Laufbahn gehen
-                        soll.
-                    </p>
-                    <br />
-                    <p>
-                        Spätestens nachdem ich während meiner Schulzeit ein Praktikum bei
-                        der Firma meines Bruders machen durfte, wusste ich, dass ich
-                        später einmal das duale Studium zum MATSE antreten will. Während
-                        des Studiums wurden aus den Grundkenntnissen von Java ein breites
-                        Wissen der Softwareentwicklung. Neben dem Back-End lernte ich auch
-                        das moderne Front-End kennen, welches schnell zu meinem
-                        Hauptinteresse wurde. Deshalb hatte ich beschlossen mich mit dem
-                        Framework React vertraut zu machen und
-                        <a href="#project-cookbook" class="scroll-link">meine erste React-Anwendung</a>
-                        zu programmieren. Deswegen ist es mir wichtig, dass meine
-                        Arbeitsstelle mit einem modernen Framework arbeitet.
-                    </p>
-                    <br />
-                    <p>
-                        In meiner Freizeit verbringe ich möglichst viel Zeit im Freien.
-                        Dabei gehe ich gerne Wandern, egal ob Waldspaziergang oder um die
-                        Alpen zu erklimmen. Zudem fahre ich gerne Fahrrad, am liebsten mit
-                        mehreren Begleitern. Nicht nur weil es mir Spaß macht, sondern
-                        auch um unnötige Fahrten mit dem Auto zu vermeiden. Außerdem bin
-                        ich sehr Fußball begeistert. Ich bin gerne im Stadion und feuere
-                        die Profis an oder versuche selber mein Können auf dem Platz zu
-                        zeigen. Neben dem Sport sind mir meine Freunde sehr wichtig. Ich
-                        versuche den Kontakt mit meinen Freunden aufrecht zu erhalten und
-                        mich mehrmals die Woche mit Bekannten zu treffen.
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="heading">Über mich</h2>
+            <img
+              class="profile-picture"
+              src="images/profile_picture.jpg"
+              alt="Hendrik Schmitz"
+            />
+          </div>
+          <div class="col-md-8">
+            <p>
+              Mein Name ist Hendrik Schmitz. Ich bin
+              <script type="text/javascript">
+                // caculate current age and output to page
+                var birthDate = new Date("1998-06-30");
+                var currentDate = Date.now();
+                var difference = currentDate - birthDate;
+                var ageDate = new Date(difference);
+                var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+                document.write(age);
+              </script>
+              Jahre alt komme aus Aachen und lebe dort auch derzeit. Ich habe
+              den Dualen Studiengang
+              <a
+                href="https://www.fh-aachen.de/studium/angewandte-mathematik-und-informatik-bsc/"
+                >Scientific Programming</a
+              >
+              absolviert und somit meinen Bachelor of Science an der
+              <a href="https://www.fh-aachen.de/">FH Aachen</a> erworben und
+              meine Ausbildung zum
+              <a href="https://www.matse-ausbildung.de/"
+                >Mathematisch technischen Softwareentwickler</a
+              >
+              beim
+              <a href="https://www.wzl.rwth-aachen.de/"
+                >Werkzeugmaschinenlabor WZL der RWTH Aachen</a
+              >
+              abgeschlossen. Seit Dezember 2023 bin ich Senior
+              Softwareentwickler bei
+              <a href="https://www.itemis.com/">itemis</a>
+              und arbeite hauptsächlich als Fullstack Entwickler mit vue.js und
+              kotlin.
+            </p>
+            <br />
+            <p>
+              In meiner achtjährigen beruflichen Laufbahn habe ich umfangreiche
+              Erfahrungen in der Frontend-Entwicklung gesammelt, wobei ich mich
+              auf Vue.js spezialisiert habe. Darüber hinaus verfüge ich über
+              umfangreiche Kenntnisse im Back-End, da ich zuvor hauptsächlich
+              mit Java und Kotlin gearbeitet habe. Diese Erfahrung ermöglicht es
+              mir, sowohl bei der Frontend- als auch bei der Backend-Entwicklung
+              effektiv zusammenzuarbeiten und nahtlose Integrationen zu
+              gewährleisten.
+            </p>
+            <br />
+            <p>
+              Dank meines fundierten Fachwissens und meiner umfangreichen
+              Erfahrung bin ich in der Lage, auf effektive Weise mit
+              verschiedenen Akteuren in der Softwareentwicklung
+              zusammenzuarbeiten, darunter Product Owner, Designer,
+              BackendEntwickler und DevOps-Experten.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End #about -->
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Beruflicher Werdegang</h2>
-        <div id="experience-timeline">
-            <div data-date="Dezember 2020 – Heute" class="experience-with-image">
-                <div class="experience-block-image">
-                    <a href="https://www.aixigo.com/de" target="_blank" rel="noopener noreferrer">
-                        <img class="default-pic" src="images/aixigo_logo.svg" alt="aixigo logo" />
-                        <img class="mobile-pic" src="images/aixigo-Software_for_Financial_Service_Providers.svg"
-                            alt="aixigo logo" />
-                    </a>
-                </div>
-                <div>
-                    <h3>aixigo AG</h3>
-                    <h4>Softwareentwickler Front-end</h4>
-                    <ul>
-                        <li>Microservice basierte Wealth Management Software</li>
-                        <li>Konzeptionierung und Entwicklung von Microfrontends mit Vue.js.</li>
-                        <li>Entwicklung und Design von Java Microservices und APIs</li>
-                        <li>Einarbeitung und fachliche Führung von Mitarbeitern.</li>
-                    </ul>
-                    <strong>vue.js | java | docker | kubernetes</strong>
-                </div>
-            </div>
-            <div data-date="Oktober 2019 – November 2020" class="experience-with-image">
-                <div class="experience-block-image">
-                    <a href="https://www.wzl.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">
-                        <img class="default-pic" src="images/rsz_wzl_rgb_png.png" alt="WZL logo" />
-                        <img class="mobile-pic" src="images/rsz_wzl_rgb_png_quer.png" alt="WZL logo" />
-                    </a>
-                </div>
-                <div>
-                    <h3>Werkzeugmaschinenlabor WZL der RWTH Aachen</h3>
-                    <h4>Softwareentwickler (Werksstudent)</h4>
-                    <ul>
-                        <li>Webanwendungen mit Java-Backend</li>
-                        <li>
-                            Vorstellung und Erprobung neuer Front-End-Technologien
-                            <ul>
-                                <li>Frameworks wie React und Vue</li>
-                                <li>Linting und Testing</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <strong>Web (HTML, CSS, JS) | java | python</strong>
-                </div>
-            </div>
+      <h2 class="heading">Beruflicher Werdegang</h2>
+      <div id="experience-timeline">
+        <div data-date="Dezember 2023 – Heute" class="experience-with-image">
+          <div class="experience-block-image">
+            <a
+              href="https://www.itemis.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="default-pic"
+                src="images/itemis.svg"
+                alt="itemis logo"
+              />
+            </a>
+          </div>
+          <div>
+            <h3>itemis AG</h3>
+            <h4>Senior Software Engineer</h4>
+            <ul>
+              <li>
+                Schlüsselrolle bei der Gestaltung der Threat Analysis and Risk
+                Assessment (TARA) durch itemis SECURE, mit dem Ziel der strikten
+                Einhaltung der ISO 21434 Standards
+              </li>
+              <li>
+                Vorantreiben der Mission, TARA mit einem benutzerfreundlichen
+                Ansatz unter Verwendung von Vue.js in Verbindung mit modelix ins
+                Web zu bringen
+              </li>
+              <li>
+                Durchsetzung hoher Qualitätsstandards für sauberen Code und Best
+                Practices in der Softwareentwicklung
+              </li>
+              <li>
+                Weiterentwicklung des Tech-Stacks durch die Einführung neuer und
+                fortschrittlicher Technologien
+              </li>
+              <li>
+                Verbesserung der Entwicklungserfahrung durch die Optimierung von
+                Workflows
+              </li>
+              <li>
+                Entwicklung von APIs und Etablierung der Kommunikation zwischen
+                Diensten mit Kotlin
+              </li>
+            </ul>
+          </div>
         </div>
+        <div data-date="Dezember 2020 – Heute" class="experience-with-image">
+          <div class="experience-block-image">
+            <a
+              href="https://www.aixigo.com/de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="default-pic"
+                src="images/aixigo_logo.svg"
+                alt="aixigo logo"
+              />
+            </a>
+          </div>
+          <div>
+            <h3>aixigo AG</h3>
+            <h4>Softwareentwickler Front-end</h4>
+            <ul>
+              <li>
+                Leitung der Entwicklung von Micro Frontends, hauptsächlich unter
+                Verwendung von Vue.js
+              </li>
+              <li>
+                Federführung bei der Entwicklung und Konzeption von Fintech-
+                Microservices mit Vue.js und Java EE
+              </li>
+              <li>
+                Zentrale Rolle bei der Modernisierung des Tech-Stacks durch die
+                Einführung von TypeScript und Storybook
+              </li>
+              <li>
+                Einsatz für hochwertige Softwareentwicklung und Betonung von
+                Clean Code
+              </li>
+              <li>Aktive Mitwirkung an der Verbesserung des CI/CD-Prozesses</li>
+              <li>
+                Verantwortung für die Einarbeitung neuer Teammitglieder,
+                Bereitstellung von Anleitung und Coaching für eine reibungslose
+                Integration
+              </li>
+              <li>
+                Teilnahme an einem Mentorenprogramm, um sich als Führungskraft
+                weiterzuentwickeln
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          data-date="Oktober 2019 – November 2020"
+          class="experience-with-image"
+        >
+          <div class="experience-block-image">
+            <a
+              href="https://www.wzl.rwth-aachen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="default-pic"
+                src="images/rsz_wzl_rgb_png.png"
+                alt="WZL logo"
+              />
+            </a>
+          </div>
+          <div>
+            <h3>Werkzeugmaschinenlabor WZL der RWTH Aachen</h3>
+            <h4>Software Engineer (Studentische Hilfskraft)</h4>
+            <ul>
+              <li>
+                Förderung der Modernisierung des Tech-Stacks durch Proof of
+                Concepts und die Einführung von Frameworks wie Vue.js und Spring
+                Boot
+              </li>
+              <li>Etablierung eines standardisierten CI/CD-Prozesses</li>
+              <li>
+                Einarbeitung, Unterstützung und Mentoring für neue Auszubildende
+                und Kollegen
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End #experience -->
 
     <div id="education">
-        <h2 class="heading">Ausbildung</h2>
-        <div class="education-block">
-            <div class="education-block-with-image">
-                <div class="education-block-image">
-                    <img class="default-pic" src="images/fhaachen.jpg" alt="FH Aachen logo" />
-                    <img class="mobile-pic" src="images/fhaachen_quer.jpg" alt="FH Aachen logo" />
-                </div>
-                <div>
-                    <h3>Fachhochschule Aachen</h3>
-                    <span class="education-date">September 2016 - August 2020</span>
-                    <h4>Bachelor of Science in Scientific Programming</h4>
-                    <p>
-                        Thesis-Thema: Entwicklung von Bewertungsansätzen für ausgewählte
-                        Process Mining Algorithmen in der Auftragsabwicklung
-                    </p>
-                </div>
-            </div>
+      <h2 class="heading">Ausbildung</h2>
+      <div class="education-block">
+        <div class="education-block-with-image">
+          <div class="education-block-image">
+            <img
+              class="default-pic"
+              src="images/fhaachen.jpg"
+              alt="FH Aachen logo"
+            />
+          </div>
+          <div>
+            <h3>Fachhochschule Aachen</h3>
+            <span class="education-date">September 2016 - August 2020</span>
+            <h4>Bachelor of Science in Scientific Programming</h4>
+            <p>
+              Thesis-Thema: Entwicklung von Bewertungsansätzen für ausgewählte
+              Process Mining Algorithmen in der Auftragsabwicklung
+            </p>
+          </div>
         </div>
-        <!-- End .education-block -->
+      </div>
+      <!-- End .education-block -->
 
-        <div class="education-block" id="ausbildung-wzl">
-            <div class="education-block-with-image">
-                <div class="education-block-image">
-                    <img class="default-pic" src="images/rsz_wzl_rgb_png.png" alt="WZL logo" />
-                    <img class="mobile-pic" src="images/rsz_wzl_rgb_png_quer.png" alt="WZL logo" />
-                </div>
-                <div>
-                    <span class="education-date">September 2016 - August 2019</span>
-                    <h3>Werkzeugmaschinenlabor WZL der RWTH Aachen</h3>
-                    <h4>Ausbildung zum Mathematisch-technischem Softwareentwickler</h4>
-                    <ul>
-                        <li>Webanwendungen mit Java-Backend</li>
-                        <li>Data Science mit Python</li>
-                        <li>Softwaredemonstratoren mit RFID-Sensoren</li>
-                    </ul>
-                    <br />
-                    <strong>Web (HTML, CSS, JS) | java | python | visual basic</strong>
-                    <br />
-                    <br />
-                    <p>Abschlussnote IHK Aachen: 2</p>
-                </div>
-            </div>
+      <div class="education-block" id="ausbildung-wzl">
+        <div class="education-block-with-image">
+          <div class="education-block-image">
+            <img
+              class="default-pic"
+              src="images/rsz_wzl_rgb_png.png"
+              alt="WZL logo"
+            />
+          </div>
+          <div>
+            <span class="education-date">September 2016 - August 2019</span>
+            <h3>Werkzeugmaschinenlabor WZL der RWTH Aachen</h3>
+            <h4>Ausbildung zum Mathematisch-technischem Softwareentwickler</h4>
+            <ul>
+              <li>
+                Entwicklung von Java-Webanwendungen für industrielle
+                Anwendungen, mit Schwerpunkt auf Frontend-Entwicklung von
+                Software- Demonstratoren in Industrie 4.0
+              </li>
+              <li>
+                Nutzung von Technologien wie JavaScript, HTML, CSS, Java,
+                PostgreSQL und Hibernate
+              </li>
+              <li>
+                Erfassung von Anforderungen und Konzeption von Anwendungen
+              </li>
+              <li>Betreuung von Auszubildenden</li>
+            </ul>
+            <br />
+            <p>Abschlussnote IHK Aachen: 2</p>
+          </div>
         </div>
-        <!-- End .education-block -->
+      </div>
+      <!-- End .education-block -->
     </div>
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projekte</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large" id="project-cookbook">
-                    <div class="project-image">
-                        <img src="images/cookbook.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Mein Kochbuch</h3>
-                        <p>
-                            Auf der Suche nach einer eleganten und praktischen Lösung zum
-                            Sichern und Anzeigen meiner Rezepte ist dieses Projekt
-                            entstanden. Dazu habe ich das bereits bestehende HTML-Template
-                            benutzt und zusammen mit gatsby und React eine Applikation
-                            geschrieben, die aus YAML-Dateien die Rezept-Seiten generieren
-                            kann. Bei dem Projekt handelt es sich um mein erstes
-                            React-Projekt.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link" href="https://reactjs.org/"><img class="project-logo-image"
-                                    src="images/220px-React-icon.svg.png" alt="React" /></a>
-                            <a class="project-logo-link" href="https://www.gatsbyjs.org/"><img
-                                    class="project-logo-image" src="images/Gatsby_Logo.svg" alt="gatsby.js" /></a>
-                            <a class="project-logo-link" href="https://www.netlify.com/"><img class="project-logo-image"
-                                    src="images/netlify-full-logo-light.png" alt="netlify" /></a>
-                        </div>
-                        <a href="https://cookbook.smtz.dev/" target="_blank" rel="noopener noreferrer">Projekt
-                            ansehen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large" id="project-cookbook">
-                    <div class="project-image">
-                        <img src="images/sankey-chart-gen.png" alt="Schematische Visualisierung von " />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Issue Transitions Sankey Chart Generator</h3>
-                        <p>
-                            Bei einem Sprint-Review kam mir der Gedanke, dass es eine schönere Art und Weise
-                            geben muss, den Verlauf von Jira-Issues vom Beginn bis zum Ende des Sprints zu
-                            visualisieren, als in einer langweiligen Excel-Tabelle. 
-                            Deshalb habe ich mich für ein Sankey-Diagramm entschieden, weil es den Mengenflus
-                            grafisch sehr schön darstellen kann. 
-                            Als Entwickler möchte ich das natürlich nicht jedes Mal manuell machen müssen,
-                            also habe ich beschlossen, den Prozess zu automatisieren.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link" href="https://vuejs.org/"><img class="project-logo-image"
-                                src="images/vue-logo.png" alt="vue.js" /></a>
-                            <a class="project-logo-link" href="https://js.devexpress.com/"><img
-                                    class="project-logo-image" src="images/devextreme.png" alt="deveextreme Javascript UI components" /></a>
-                            <a class="project-logo-link" href="https://www.netlify.com/"><img class="project-logo-image"
-                                    src="images/netlify-full-logo-light.png" alt="netlify" /></a>
-                        </div>
-                        <a href="https://issue-transitions.smtz.dev/" target="_blank" rel="noopener noreferrer">Projekt
-                            ansehen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large" id="project-motorsportcalendar">
-                    <div class="project-image">
-                        <img src="images/motorsportcalendar.png" alt="Motorsportkalender" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Motorsportkalender</h3>
-                        <p>
-                            Da bei den vielen Rennen oft der Überblick verloren geht, haben
-                            meine Freunde und ich alle Rennen gemeinsam in einer Google
-                            Sheets Datei gesammelt. Damit wir einen funktionalen Überblick
-                            über die aktuellen Rennen haben, ist hiermit mein erstes
-                            vue.js-Projekt entstanden. Beim Build werden die Daten aus der
-                            Google Sheets Datei gezogen und mittels Gridsome die statischen
-                            Seiten generiert und über Netlify deployed. Durch einen Build
-                            Hook bleiben die Daten immer aktuell.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link" href="https://vuejs.org/"><img class="project-logo-image"
-                                    src="images/vue-logo.png" alt="vue.js" /></a>
-                            <a class="project-logo-link" href="https://gridsome.org/"><img class="project-logo-image"
-                                    src="images/gridsome-logo.svg" alt="Gridsome" /></a>
-                            <a class="project-logo-link" href="https://www.netlify.com/"><img class="project-logo-image"
-                                    src="images/netlify-full-logo-light.png" alt="netlify" /></a>
-                        </div>
-                        <a href="https://motorsport-calendar.smtz.dev/" target="_blank"
-                            rel="noopener noreferrer">Projekt ansehen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large" id="project-motorsportcalendar">
-                    <div class="project-image">
-                        <img src="images/motorsportcalendar.png" alt="Motorsportkalender 2.0" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Motorsportkalender 2.0</h3>
-                        <p>
-                            Diese Webanwendung ist der Nachfolger vom vue/gridsome-basierten Motorsportkalender. 
-                            Obwohl Gridsome zum Zeitpunkt der Erstellung ein praktisches Tool war, konnte es
-                            wird es wohl leider nicht auf vue 3 migriert. Da ich die Anwendung aber weiter
-                            entwickeln wollte mit vue 3 und typescript, habe mich entschieden das Projekt mit
-                            nuxt wiederzubeleben. Das bietet mir auch eine Chance an zu sehen, wie ich mich selbst
-                            seit der Erstellung des ersten Motorsportkalenders weiterentwickelt habe.
-                            Das Projekt ist noch work in progress, kann aber trotzdem schon mal angesehen werden.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link" href="https://vuejs.org/"><img class="project-logo-image"
-                                    src="images/vue-logo.png" alt="vue.js" /></a>
-                            <a class="project-logo-link" href="https://nuxt.com/"><img class="project-logo-image"
-                                    src="images/nuxt-logo.svg" alt="Nuxt 3" /></a>
-                            <a class="project-logo-link" href="https://storybook.js.org/"><img class="project-logo-image"
-                                        src="images/storybook-logo.png" alt="Storybook" /></a>
-                            <a class="project-logo-link" href="https://www.netlify.com/"><img class="project-logo-image"
-                                    src="images/netlify-full-logo-light.png" alt="netlify" /></a>
-                        </div>
-                        <a href="https://github.com/drik98/motorsport-calendar-nuxt-3" target="_blank"
-                            rel="noopener noreferrer">Code ansehen</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/K640_aixperanto.JPG" />
-                    </div>
-
-                    <div class="project-info">
-                        <h3>Aixperanto</h3>
-                        <p>
-                            Bei Aixperanto handelt es sich um eine Applikation zur
-                            Darstellung von Prozessen mittels der gleichnamigen
-                            Prozessmodellierungssprache "aixperanto". Das Programm habe ich
-                            im ersten Jahr meiner
-                            <a href="#ausbildung-wzl" class="scroll-link">Ausbildung am WZL</a>
-                            in der Programmiersprache VBA für das Office Programm
-                            <a href="https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software"
-                                target="_blank" rel="noopener noreferrer">Microsoft Visio</a>
-                            geschrieben. Dabei liest das Programm die Informationen der
-                            einzelnen Prozessschritte und deren Verbindungen aus und
-                            platziert diese automatisch in den zugehörigen Swimlanes.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link"
-                                href="https://docs.microsoft.com/de-de/office/vba/api/overview/"><img
-                                    class="project-logo-image" src="images/vba-logo.jpg" alt="VBA" /></a>
-                            <a class="project-logo-link"
-                                href="https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software"><img
-                                    class="project-logo-image" src="images/2000px-Microsoft_Office_Visio_(2019).svg.png"
-                                    alt="Visio" /></a>
-                        </div>
-                        <a href="http://www.aixperanto.de/" target="_blank"
-                            rel="noopener noreferrer">Projekt-Website</a>
-                    </div>
-                </div>
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/K640_worldmap-min-1024x560.JPG" />
-                    </div>
-
-                    <div class="project-info">
-                        <h3>OptiWo</h3>
-                        <p>
-                            Bei dem Projekt "OptiWo" handelt es sich um eine Webanwendung
-                            mit Java-Backend. OptiWo bietet eine datenbasierte Unterstützung
-                            bei der Gestaltung globaler Produktionsnetzwerke. Bei OptiWo
-                            habe ich während dem dritten
-                            <a href="#ausbildung-wzl" class="scroll-link">Ausbildungsjahr am WZL</a>
-                            mit entwickelt. Dabei habe ich hauptsächlich das Design
-                            angepasst und die verschiedenen Views weiterentwickelt.
-                        </p>
-                        <div class="project-logos">
-                            <a class="project-logo-link"><img class="project-logo-image"
-                                    src="images/800px-Java_programming_language_logo.svg.png" alt="java" /></a>
-                            <a class="project-logo-link"><img class="project-logo-image"
-                                    src="images/javascript-css-html.png" alt="html, css, javascript" /></a>
-                        </div>
-                        <a href="https://optiwo.de/" target="_blank" rel="noopener noreferrer">Projekt-Website</a>
-                    </div>
-                </div>
-                <!-- End .project -->
+      <h2 class="heading">Projekte</h2>
+      <div class="container">
+        <div class="row">
+          <div class="project shadow-large" id="project-cookbook">
+            <div class="project-image">
+              <img src="images/siewedding.png" />
             </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Hochzeits Website</h3>
+              <p>
+                Anlässlicher meiner Hochzeit habe ich nach einer Möglichkeit
+                gesucht die Gäste bezüglich Location, Agenda, Dresscode, etc. zu
+                informieren. Deswegen habe ich mich kurzerhand dazu entschlossen
+                eine kleine Website zu erstelle, die ich mittels Nuxt und static
+                generation erstellt habe.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link" href="https://vuejs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/vue-logo.png"
+                    alt="vue.js"
+                /></a>
+                <a class="project-logo-link" href="https://nuxt.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/nuxt-logo.svg"
+                    alt="Nuxt 3"
+                /></a>
+                <a class="project-logo-link" href="https://www.netlify.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/netlify-full-logo-light.png"
+                    alt="netlify"
+                /></a>
+              </div>
+              <a
+                href="https://siewedding.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt ansehen</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+
+          <div class="project shadow-large" id="project-cookbook">
+            <div class="project-image">
+              <img src="images/cookbook.png" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Mein Kochbuch</h3>
+              <p>
+                Auf der Suche nach einer eleganten und praktischen Lösung zum
+                Sichern und Anzeigen meiner Rezepte ist dieses Projekt
+                entstanden. Dazu habe ich das bereits bestehende HTML-Template
+                benutzt und zusammen mit gatsby und React eine Applikation
+                geschrieben, die aus YAML-Dateien die Rezept-Seiten generieren
+                kann. Bei dem Projekt handelt es sich um mein erstes
+                React-Projekt.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link" href="https://reactjs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/220px-React-icon.svg.png"
+                    alt="React"
+                /></a>
+                <a class="project-logo-link" href="https://www.gatsbyjs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/Gatsby_Logo.svg"
+                    alt="gatsby.js"
+                /></a>
+                <a class="project-logo-link" href="https://www.netlify.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/netlify-full-logo-light.png"
+                    alt="netlify"
+                /></a>
+              </div>
+              <a
+                href="https://cookbook.smtz.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt ansehen</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+
+          <div class="project shadow-large" id="project-cookbook">
+            <div class="project-image">
+              <img
+                src="images/sankey-chart-gen.png"
+                alt="Schematische Visualisierung von "
+              />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Issue Transitions Sankey Chart Generator</h3>
+              <p>
+                Bei einem Sprint-Review kam mir der Gedanke, dass es eine
+                schönere Art und Weise geben muss, den Verlauf von Jira-Issues
+                vom Beginn bis zum Ende des Sprints zu visualisieren, als in
+                einer langweiligen Excel-Tabelle. Deshalb habe ich mich für ein
+                Sankey-Diagramm entschieden, weil es den Mengenflus grafisch
+                sehr schön darstellen kann. Als Entwickler möchte ich das
+                natürlich nicht jedes Mal manuell machen müssen, also habe ich
+                beschlossen, den Prozess zu automatisieren.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link" href="https://vuejs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/vue-logo.png"
+                    alt="vue.js"
+                /></a>
+                <a class="project-logo-link" href="https://js.devexpress.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/devextreme.png"
+                    alt="deveextreme Javascript UI components"
+                /></a>
+                <a class="project-logo-link" href="https://www.netlify.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/netlify-full-logo-light.png"
+                    alt="netlify"
+                /></a>
+              </div>
+              <a
+                href="https://issue-transitions.smtz.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt ansehen</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+
+          <div class="project shadow-large" id="project-motorsportcalendar">
+            <div class="project-image">
+              <img
+                src="images/motorsportcalendar.png"
+                alt="Motorsportkalender"
+              />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Motorsportkalender</h3>
+              <p>
+                Da bei den vielen Rennen oft der Überblick verloren geht, haben
+                meine Freunde und ich alle Rennen gemeinsam in einer Google
+                Sheets Datei gesammelt. Damit wir einen funktionalen Überblick
+                über die aktuellen Rennen haben, ist hiermit mein erstes
+                vue.js-Projekt entstanden. Beim Build werden die Daten aus der
+                Google Sheets Datei gezogen und mittels Gridsome die statischen
+                Seiten generiert und über Netlify deployed. Durch einen Build
+                Hook bleiben die Daten immer aktuell.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link" href="https://vuejs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/vue-logo.png"
+                    alt="vue.js"
+                /></a>
+                <a class="project-logo-link" href="https://gridsome.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/gridsome-logo.svg"
+                    alt="Gridsome"
+                /></a>
+                <a class="project-logo-link" href="https://www.netlify.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/netlify-full-logo-light.png"
+                    alt="netlify"
+                /></a>
+              </div>
+              <a
+                href="https://motorsport-calendar.smtz.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt ansehen</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+
+          <div class="project shadow-large" id="project-motorsportcalendar">
+            <div class="project-image">
+              <img
+                src="images/motorsportcalendar.png"
+                alt="Motorsportkalender 2.0"
+              />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Motorsportkalender 2.0</h3>
+              <p>
+                Diese Webanwendung ist der Nachfolger vom vue/gridsome-basierten
+                Motorsportkalender. Obwohl Gridsome zum Zeitpunkt der Erstellung
+                ein praktisches Tool war, konnte es wird es wohl leider nicht
+                auf vue 3 migriert. Da ich die Anwendung aber weiter entwickeln
+                wollte mit vue 3 und typescript, habe mich entschieden das
+                Projekt mit nuxt wiederzubeleben. Das bietet mir auch eine
+                Chance an zu sehen, wie ich mich selbst seit der Erstellung des
+                ersten Motorsportkalenders weiterentwickelt habe. Das Projekt
+                ist noch work in progress, kann aber trotzdem schon mal
+                angesehen werden.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link" href="https://vuejs.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/vue-logo.png"
+                    alt="vue.js"
+                /></a>
+                <a class="project-logo-link" href="https://nuxt.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/nuxt-logo.svg"
+                    alt="Nuxt 3"
+                /></a>
+                <a class="project-logo-link" href="https://storybook.js.org/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/storybook-logo.png"
+                    alt="Storybook"
+                /></a>
+                <a class="project-logo-link" href="https://www.netlify.com/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/netlify-full-logo-light.png"
+                    alt="netlify"
+                /></a>
+              </div>
+              <a
+                href="https://github.com/drik98/motorsport-calendar-nuxt-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code ansehen</a
+              >
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/K640_aixperanto.JPG" />
+            </div>
+
+            <div class="project-info">
+              <h3>Aixperanto</h3>
+              <p>
+                Bei Aixperanto handelt es sich um eine Applikation zur
+                Darstellung von Prozessen mittels der gleichnamigen
+                Prozessmodellierungssprache "aixperanto". Das Programm habe ich
+                im ersten Jahr meiner
+                <a href="#ausbildung-wzl" class="scroll-link"
+                  >Ausbildung am WZL</a
+                >
+                in der Programmiersprache VBA für das Office Programm
+                <a
+                  href="https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Microsoft Visio</a
+                >
+                geschrieben. Dabei liest das Programm die Informationen der
+                einzelnen Prozessschritte und deren Verbindungen aus und
+                platziert diese automatisch in den zugehörigen Swimlanes.
+              </p>
+              <div class="project-logos">
+                <a
+                  class="project-logo-link"
+                  href="https://docs.microsoft.com/de-de/office/vba/api/overview/"
+                  ><img
+                    class="project-logo-image"
+                    src="images/vba-logo.jpg"
+                    alt="VBA"
+                /></a>
+                <a
+                  class="project-logo-link"
+                  href="https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software"
+                  ><img
+                    class="project-logo-image"
+                    src="images/2000px-Microsoft_Office_Visio_(2019).svg.png"
+                    alt="Visio"
+                /></a>
+              </div>
+              <a
+                href="http://www.aixperanto.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt-Website</a
+              >
+            </div>
+          </div>
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/K640_worldmap-min-1024x560.JPG" />
+            </div>
+
+            <div class="project-info">
+              <h3>OptiWo</h3>
+              <p>
+                Bei dem Projekt "OptiWo" handelt es sich um eine Webanwendung
+                mit Java-Backend. OptiWo bietet eine datenbasierte Unterstützung
+                bei der Gestaltung globaler Produktionsnetzwerke. Bei OptiWo
+                habe ich während dem dritten
+                <a href="#ausbildung-wzl" class="scroll-link"
+                  >Ausbildungsjahr am WZL</a
+                >
+                mit entwickelt. Dabei habe ich hauptsächlich das Design
+                angepasst und die verschiedenen Views weiterentwickelt.
+              </p>
+              <div class="project-logos">
+                <a class="project-logo-link"
+                  ><img
+                    class="project-logo-image"
+                    src="images/800px-Java_programming_language_logo.svg.png"
+                    alt="java"
+                /></a>
+                <a class="project-logo-link"
+                  ><img
+                    class="project-logo-image"
+                    src="images/javascript-css-html.png"
+                    alt="html, css, javascript"
+                /></a>
+              </div>
+              <a
+                href="https://optiwo.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projekt-Website</a
+              >
+            </div>
+          </div>
+          <!-- End .project -->
         </div>
+      </div>
     </div>
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Android</li>
-            <li>Ant</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>CI/CD</li>
-            <li>CSS</li>
-            <li>Data Mining</li>
-            <li>Docker</li>
-            <li>Git</li>
-            <li>GitLab</li>
-            <li>GitHub</li>
-            <li>Git Pipeline</li>
-            <li>Gatsby.js</li>
-            <li>Gradle</li>
-            <li>HTML</li>
-            <li>Hibernate</li>
-            <li>JavaScript</li>
-            <li>JPA</li>
-            <li>JUnit</li>
-            <li>Jasmine</li>
-            <li>Java</li>
-            <li>JSON</li>
-            <li>Kubernetes</li>
-            <li>LAMP-Stack</li>
-            <li>Linux</li>
-            <li>Machine Learning</li>
-            <li>Maven</li>
-            <li>Microsoft Office</li>
-            <li>Netlify</li>
-            <li>PHP</li>
-            <li>PostgreSQL</li>
-            <li>Process Mining</li>
-            <li>Python</li>
-            <li>REST-api</li>
-            <li>React</li>
-            <li>SQL</li>
-            <li>Spring</li>
-            <li>SVN</li>
-            <li>Tomcat</li>
-            <li>Visual Basic for Applications</li>
-            <li>vue.js</li>
-            <li>Webpack</li>
-        </ul>
+      <h2 class="heading">Skills</h2>
+      <ul>
+        <li>Android</li>
+        <li>Ant</li>
+        <li>C#</li>
+        <li>C++</li>
+        <li>CI/CD</li>
+        <li>CSS</li>
+        <li>Data Mining</li>
+        <li>Docker</li>
+        <li>Git</li>
+        <li>GitLab</li>
+        <li>GitHub</li>
+        <li>Git Pipeline</li>
+        <li>Gatsby.js</li>
+        <li>Gradle</li>
+        <li>HTML</li>
+        <li>Hibernate</li>
+        <li>JavaScript</li>
+        <li>JPA</li>
+        <li>JUnit</li>
+        <li>Jasmine</li>
+        <li>Java</li>
+        <li>JSON</li>
+        <li>Kubernetes</li>
+        <li>LAMP-Stack</li>
+        <li>Linux</li>
+        <li>Liquibase</li>
+        <li>Machine Learning</li>
+        <li>Maven</li>
+        <li>Microsoft Office</li>
+        <li>Netlify</li>
+        <li>Nuxt</li>
+        <li>PHP</li>
+        <li>PostgreSQL</li>
+        <li>Process Mining</li>
+        <li>Python</li>
+        <li>Quarkus</li>
+        <li>REST-api</li>
+        <li>React</li>
+        <li>SQL</li>
+        <li>Spring</li>
+        <li>SVN</li>
+        <li>Tomcat</li>
+        <li>Typescript</li>
+        <li>Visual Basic for Applications</li>
+        <li>vue.js</li>
+        <li>Webpack</li>
+      </ul>
     </div>
     <!-- End #skills -->
 
     <div id="contact">
-        <h2>Kontakt</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/bewerbung@smtz.dev">
-                <input type="hidden" name="_subject" value="Kontaktanfrage via Portfolio" />
-                <input type="email" name="_replyto" placeholder="E-Mail" required />
-                <textarea name="message" placeholder="Nachricht" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
+      <h2>Kontakt</h2>
+      <div id="contact-form">
+        <form method="POST" action="https://formspree.io/bewerbung@smtz.dev">
+          <input
+            type="hidden"
+            name="_subject"
+            value="Kontaktanfrage via Portfolio"
+          />
+          <input type="email" name="_replyto" placeholder="E-Mail" required />
+          <textarea name="message" placeholder="Nachricht" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>Copyright &copy; 2020 Hendrik Schmitz</p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/drik98" target="_blank" rel="noopener noreferrer"><i
-                                    class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <!--    <li>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 copyright">
+            <p>
+              Copyright &copy;
+              <script type="text/javascript">
+                document.write(new Date().getFullYear());
+              </script>
+              Hendrik Schmitz
+            </p>
+          </div>
+          <div class="col-sm-2 top">
+            <span id="to-top">
+              <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="col-sm-5 social">
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/drik98"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+              <!--    <li>
                             <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow"
                                     aria-hidden="true"></i></a>
                         </li> -->
-                        <li>
-                            <a href="https://www.linkedin.com/in/hendriksmtz" target="_blank"
-                                rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.xing.com/profile/Hendrik_Schmitz29" target="_blank"
-                                rel="noopener noreferrer"><i class="fa fa-xing" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/hendriksmtz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.xing.com/profile/Hendrik_Schmitz29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-xing" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- End footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-</body>
-
+  </body>
 </html>
