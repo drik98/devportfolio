@@ -14,4 +14,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: cv_hendrik_schmitz_de.pdf
+          path: cv/cv_hendrik_schmitz_de.pdf
