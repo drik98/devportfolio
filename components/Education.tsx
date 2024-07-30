@@ -1,42 +1,56 @@
+import DetailedItem from "@/components/DetailedItem";
+import rawEducation from "@/content/education.json";
 import styles from "./Education.module.scss";
 
-import fhAachenLogo from "@/images/education/fhaachen.jpg";
-import wzlLogo from "@/images/experience/wzl.png";
-import DetailedItem from "./DetailedItem";
+const education: EducationItem[] = rawEducation.map((item) => ({
+  educator: item.educator,
+  image: item.image,
+  keyPoints: item.keyPoints,
+  startDate: new Date(item.startDate),
+  title: item.title,
+  endDate: item.endDate ? new Date(item.endDate) : undefined,
+  url: item.url,
+}));
 
 export default function Education() {
   return (
     <div id="education" className={styles.education}>
       <h2 className="heading">Ausbildung</h2>
-
-      <DetailedItem
-        educator="Fachhochschule Aachen"
-        keyPoints={[
-          "Thesis-Thema: Entwicklung von Bewertungsansätzen für ausgewählte Process Mining Algorithmen in der Auftragsabwicklung",
-        ]}
-        image={fhAachenLogo}
-        startDate={new Date("2016-09-01")}
-        endDate={new Date("2020-08-31")}
-        title="Bachelor of Science in Scientific Programming"
-        url="https://www.fh-aachen.de/"
-        showDateRange
-      />
-
-      <DetailedItem
-        educator="Fachhochschule Aachen"
-        keyPoints={[
-          "Entwicklung von Java-Webanwendungen für industrielle Anwendungen, mit Schwerpunkt auf Frontend-Entwicklung von Software- Demonstratoren in Industrie 4.0",
-          "Nutzung von Technologien wie JavaScript, HTML, CSS, Java, PostgreSQL und Hibernate",
-          "Erfassung von Anforderungen und Konzeption von Anwendungen",
-          "Betreuung von Auszubildenden",
-        ]}
-        image={wzlLogo}
-        startDate={new Date("2016-09-01")}
-        endDate={new Date("2019-08-31")}
-        title="Ausbildung zum Mathematisch-technischem Softwareentwickler"
-        url="https://www.wzl.rwth-aachen.de/"
-        showDateRange
-      />
+      {education.map(EducationTimelineItem)}
     </div>
+  );
+}
+
+interface EducationItem {
+  educator: string;
+  endDate?: Date;
+  image: string;
+  keyPoints: string[];
+  startDate: Date;
+  title: string;
+  url?: string;
+}
+
+function EducationTimelineItem({
+  startDate,
+  endDate,
+  url,
+  image,
+  educator,
+  title,
+  keyPoints,
+}: EducationItem) {
+  return (
+    <DetailedItem
+      key={`${educator}-${startDate.toISOString()}`}
+      showDateRange
+      startDate={startDate}
+      endDate={endDate}
+      educator={educator}
+      keyPoints={keyPoints}
+      image={image}
+      title={title}
+      url={url}
+    />
   );
 }

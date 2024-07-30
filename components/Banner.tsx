@@ -6,10 +6,7 @@ export default function Banner() {
       <div className={styles.bannerContent}>
         <h1>Hendrik Schmitz</h1>
         <h2>Software Engineer</h2>
-        <a
-          href="/cv_hendrik_schmitz_de.pdf"
-          download="cv-hendrik-schmitz.pdf"
-        >
+        <a href="/cv_hendrik_schmitz_de.pdf" download="cv-hendrik-schmitz.pdf">
           Download CV
         </a>
       </div>

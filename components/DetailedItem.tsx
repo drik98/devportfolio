@@ -1,5 +1,5 @@
-import { StaticImageData } from 'next/image';
-import Image from 'next-export-optimize-images/image';
+import { StaticImageData } from "next/image";
+import Image from "next-export-optimize-images/image";
 import styles from "./DetailedItem.module.scss";
 import { formatDateRange } from "@/util/date-time";
 
@@ -17,7 +17,7 @@ export default function DetailedItem({
   startDate?: Date;
   endDate?: Date;
   url?: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   educator: string;
   title: string;
   keyPoints: string[];
@@ -25,11 +25,13 @@ export default function DetailedItem({
   className?: string;
 }) {
   return (
-    <div
-      className={[styles.detailedItem, className ?? ''].join(" ")}
-    >
+    <div className={[styles.detailedItem, className ?? ""].join(" ")}>
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <Image src={image} alt={`Logo of ${educator}`} />
+        {typeof image === "string" ? (
+          <img src={image} alt={`Logo of ${educator}`} />
+        ) : (
+          <Image src={image} alt={`Logo of ${educator}`} />
+        )}
       </a>
       <div>
         <h3>{educator}</h3>
