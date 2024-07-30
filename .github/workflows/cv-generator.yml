@@ -10,6 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv/cv_hendrik_schmitz_de.tex
+          continue_on_error: true
         env:
           TEXINPUTS: ".:./cv//:"
       - name: Upload PDF file
