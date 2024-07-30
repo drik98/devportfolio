@@ -258,7 +258,7 @@ function TechnologyItem({ url, image, name }: Technology) {
       <Image
         className={styles.projectLogoImage}
         src={image}
-        alt={`Logo of {name}`}
+        alt={`Logo of ${name}`}
         title={name}
       />
     </a>
