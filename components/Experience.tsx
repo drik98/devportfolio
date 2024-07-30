@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 import styles from "./Experience.module.scss";
 
 import itemisLogo from "@/images/experience/itemis.svg";

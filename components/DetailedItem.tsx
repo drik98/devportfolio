@@ -1,4 +1,5 @@
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
+import Image from 'next-export-optimize-images/image';
 import styles from "./DetailedItem.module.scss";
 import { formatDateRange } from "@/util/date-time";
 
