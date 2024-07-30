@@ -1,0 +1,39 @@
+.about {
+  padding: 75px 15px;
+  border-bottom: 1px solid #dcd9d9;
+
+  h2 {
+    color: #374054;
+  }
+
+  p {
+    color: #74808a;
+    margin: 0;
+    hyphens: auto;
+    text-align: justify;
+  }
+}
+
+.aboutRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profilePicture {
+  width: 100%;
+  height: auto;
+  padding: 25px 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  .about {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutRow {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+.detailedItem {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding: 15px;
+  border: 1px solid #dcd9d9;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: #374054;
+  }
+
+  span {
+    color: #74808a;
+    float: right;
+  }
+
+  h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+
+  p,
+  ul {
+    margin: 0;
+    color: #74808a;
+    font-size: 0.9em;
+  }
+
+  ul {
+    padding: 0 0 0 15px;
+  }
+
+  img {
+    height: 4rem;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .detailedItem {
+    h3,
+    span {
+      float: none;
+    }
+  }
+}
