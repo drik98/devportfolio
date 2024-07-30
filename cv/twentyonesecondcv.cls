@@ -251,7 +251,7 @@
 \newcommand{\makefooterprofile}[2]{
         \vfill
         \scriptsize
-		#1\newline
+		#1
 		#2
 }
 
@@ -262,7 +262,7 @@
 }
 \newcommand{\textfootersidenote}[2]{
     \renewcommand{\textfootersidenote}{
-        #1\newline
+        #1
         #2
     }
 }
