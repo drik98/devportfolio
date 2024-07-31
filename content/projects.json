@@ -1,0 +1,164 @@
+[
+  {
+    "title": "Hochzeits Website",
+    "description": "Anlässlicher meiner Hochzeit habe ich nach einer Möglichkeit gesucht die Gäste bezüglich Location, Agenda, Dresscode, etc. zu informieren. Deswegen habe ich mich kurzerhand dazu entschlossen eine kleine Website zu erstelle, die ich mittels Nuxt und static generation erstellt habe.",
+    "image": "/images/projects/siewedding.png",
+    "projectUrl": "https://siewedding.netlify.app/",
+    "technologies": [
+      {
+        "name": "vue.js",
+        "url": "https://vuejs.org/",
+        "image": "/images/technologies/vue.png"
+      },
+      {
+        "name": "NuxtJS",
+        "url": "https://nuxt.com/",
+        "image": "/images/technologies/nuxt.svg"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": "Mein Kochbuch",
+    "description": "Auf der Suche nach einer eleganten und praktischen Lösung zum Sichern und Anzeigen meiner Rezepte ist dieses Projekt entstanden. Dazu habe ich das bereits bestehende HTML-Template benutzt und zusammen mit gatsby und React eine Applikation geschrieben, die aus YAML-Dateien die Rezept-Seiten generieren kann. Bei dem Projekt handelt es sich um mein erstes React-Projekt.",
+    "image": "/images/projects/cookbook.png",
+    "projectUrl": "https://cookbook.smtz.dev/",
+    "sourceCodeUrl": "",
+    "technologies": [
+      {
+        "name": "React",
+        "url": "https://reactjs.org/",
+        "image": "/images/technologies/react.png"
+      },
+      {
+        "name": "Gatsby",
+        "url": "https://www.gatsbyjs.org/",
+        "image": "/images/technologies/gatsby.svg"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": "Issue Transitions Sankey Chart Generator",
+    "description": "Bei einem Sprint-Review kam mir der Gedanke, dass es eine schönere Art und Weise geben muss, den Verlauf von Jira-Issues vom Beginn bis zum Ende des Sprints zu visualisieren, als in einer langweiligen Excel-Tabelle. Deshalb habe ich mich für ein Sankey-Diagramm entschieden, weil es den Mengenflus grafisch sehr schön darstellen kann. Als Entwickler möchte ich das natürlich nicht jedes Mal manuell machen müssen, also habe ich beschlossen, den Prozess zu automatisieren.",
+    "image": "/images/projects/issue-transitions.png",
+    "projectUrl": "https://issue-transitions.smtz.dev/",
+    "sourceCodeUrl": "",
+    "technologies": [
+      {
+        "name": "vue.js",
+        "url": "https://vuejs.org/",
+        "image": "/images/technologies/vue.png"
+      },
+      {
+        "name": "DevExpress",
+        "url": "https://js.devexpress.com/",
+        "image": "/images/technologies/devextreme.png"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": "Motorsportkalender",
+    "description": "Da bei den vielen Rennen oft der Überblick verloren geht, haben meine Freunde und ich alle Rennen gemeinsam in einer Google Sheets Datei gesammelt. Damit wir einen funktionalen Überblick über die aktuellen Rennen haben, ist hiermit mein erstes vue.js-Projekt entstanden. Beim Build werden die Daten aus der Google Sheets Datei gezogen und mittels Gridsome die statischen Seiten generiert und über Netlify deployed. Durch einen Build Hook bleiben die Daten immer aktuell.",
+    "image": "/images/projects/motorsportcalendar.png",
+    "projectUrl": "https://motorsport-calendar.smtz.dev/",
+    "sourceCodeUrl": "",
+    "technologies": [
+      {
+        "name": "vue.js",
+        "url": "https://vuejs.org/",
+        "image": "/images/technologies/vue.png"
+      },
+      {
+        "name": "Gridsome",
+        "url": "https://gridsome.org/",
+        "image": "/images/technologies/gridsome.svg"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": "Motorsportkalender 2.0",
+    "description": "Diese Webanwendung ist der Nachfolger vom vue/gridsome-basierten Motorsportkalender. Obwohl Gridsome zum Zeitpunkt der Erstellung ein praktisches Tool war, konnte es wird es wohl leider nicht auf vue 3 migriert. Da ich die Anwendung aber weiter entwickeln wollte mit vue 3 und typescript, habe mich entschieden das Projekt mit nuxt wiederzubeleben. Das bietet mir auch eine Chance an zu sehen, wie ich mich selbst seit der Erstellung des ersten Motorsportkalenders weiterentwickelt habe. Das Projekt ist noch work in progress, kann aber trotzdem schon mal angesehen werden.",
+    "image": "/images/projects/motorsportcalendar.png",
+    "projectUrl": "",
+    "sourceCodeUrl": "https://github.com/drik98/motorsport-calendar-nuxt-3",
+    "technologies": [
+      {
+        "name": "vue.js",
+        "url": "https://vuejs.org/",
+        "image": "/images/technologies/vue.png"
+      },
+      {
+        "name": "NuxtJS",
+        "url": "https://nuxt.com/",
+        "image": "/images/technologies/nuxt.svg"
+      },
+      {
+        "name": "Storybook",
+        "url": "https://storybook.js.org/",
+        "image": "/images/technologies/storybook.png"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": "Aixperanto",
+    "description": "Bei Aixperanto handelt es sich um eine Applikation zur Darstellung von Prozessen mittels der gleichnamigen Prozessmodellierungssprache aixperanto. Das Programm habe ich im ersten Jahr meiner Ausbildung am WZL in der Programmiersprache VBA für das Office Programm Microsoft Visio geschrieben. Dabei liest das Programm die Informationen der einzelnen Prozessschritte und deren Verbindungen aus und platziert diese automatisch in den zugehörigen Swimlanes.",
+    "image": "/images/projects/aixperanto.jpg",
+    "projectUrl": "",
+    "sourceCodeUrl": "",
+    "technologies": [
+      {
+        "name": "Visual Basic for Applications",
+        "url": "https://docs.microsoft.com/de-de/office/vba/api/overview/",
+        "image": "/images/technologies/vba.jpg"
+      },
+      {
+        "name": "Microsoft Visio",
+        "url": "https://www.microsoft.com/de-de/microsoft-365/visio/flowchart-software",
+        "image": "/images/technologies/visio.png"
+      }
+    ]
+  },
+  {
+    "title": "OptiWo",
+    "description": "Bei dem Projekt OptiWo handelt es sich um eine Webanwendung mit Java-Backend. OptiWo bietet eine datenbasierte Unterstützung bei der Gestaltung globaler Produktionsnetzwerke. Bei OptiWo habe ich während dem dritten Ausbildungsjahr am WZL mit entwickelt. Dabei habe ich hauptsächlich das Design angepasst und die verschiedenen Views weiterentwickelt.",
+    "image": "/images/projects/optiwo.jpg",
+    "projectUrl": "",
+    "sourceCodeUrl": "",
+    "technologies": [
+      {
+        "image": "/images/technologies/java.png",
+        "name": "Java",
+        "url": "https://www.java.com/"
+      },
+      {
+        "image": "/images/technologies/javascript-css-html.png",
+        "name": "Javascript Css Html5",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ]
+  }
+]

@@ -17,10 +17,13 @@ export default function Header() {
       <header
         className={clsx({
           [styles.headerActive]: isMobileMenuOpened,
-          [styles.header]: true
+          [styles.header]: true,
         })}
       >
-        <div className={styles.mobileMenuClose} onClick={() => setMobileMenuOpened(false)}>
+        <div
+          className={styles.mobileMenuClose}
+          onClick={() => setMobileMenuOpened(false)}
+        >
           <span>Schließen</span>
           <i className="fa fa-times" aria-hidden="true"></i>
         </div>

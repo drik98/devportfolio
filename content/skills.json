@@ -1,0 +1,202 @@
+[
+  {
+    "category": "infrastructure",
+    "name": "CI/CD",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "CSS/SCSS",
+    "level": 0
+  },
+  {
+    "category": "infrastructure",
+    "name": "Docker",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "E2E-Testing",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Gatsby.js",
+    "level": 0
+  },
+  {
+    "category": "build-tools",
+    "name": "Gradle",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Gridsome",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Hibernate",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "HTML",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "Integration testing",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "Jasmine",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "Jest",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "Java",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "Kotlin",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "Javascript",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "JPA",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "Unit testing",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "Typescript",
+    "level": 0
+  },
+  {
+    "category": "infrastructure",
+    "name": "Kubernetes",
+    "level": 0
+  },
+  {
+    "category": "infrastructure",
+    "name": "Linux",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Liquibase",
+    "level": 0
+  },
+  {
+    "category": "build-tools",
+    "name": "Maven",
+    "level": 0
+  },
+  {
+    "category": "programming-concepts",
+    "name": "Micro services",
+    "level": 0
+  },
+  {
+    "category": "programming-concepts",
+    "name": "Test-driven development",
+    "level": 0
+  },
+  {
+    "category": "infrastructure",
+    "name": "Netlify",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Next.js",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Nuxt",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "Playwright",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "PostgreSQL",
+    "level": 0
+  },
+  {
+    "category": "programming-concepts",
+    "name": "Process Mining",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "Python",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Quarkus",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "React",
+    "level": 0
+  },
+  {
+    "category": "programming-concepts",
+    "name": "REST",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "Spring",
+    "level": 0
+  },
+  {
+    "category": "programming-languages",
+    "name": "SQL",
+    "level": 0
+  },
+  {
+    "category": "build-tools",
+    "name": "vite",
+    "level": 0
+  },
+  {
+    "category": "build-tools",
+    "name": "Webpack",
+    "level": 0
+  },
+  {
+    "category": "quality-assurance",
+    "name": "vitest",
+    "level": 0
+  },
+  {
+    "category": "frameworks-technologies",
+    "name": "vue.js",
+    "level": 0
+  }
+]

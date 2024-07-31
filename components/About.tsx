@@ -1,4 +1,4 @@
-import Image from 'next-export-optimize-images/image';
+import Image from "next-export-optimize-images/image";
 import profilePic from "@/cv/profile_picture.jpg";
 import styles from "./About.module.scss";
 
