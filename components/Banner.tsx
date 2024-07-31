@@ -13,7 +13,10 @@ export default function Banner({
       <div className={styles.bannerContent}>
         <h1>Hendrik Schmitz</h1>
         <h2>{messages.banner.jobTitle}</h2>
-        <a href={`/cv_hendrik_schmitz_${locale}.pdf`} download="cv-hendrik-schmitz.pdf">
+        <a
+          href={`/cv_hendrik_schmitz_${locale}.pdf`}
+          download="cv-hendrik-schmitz.pdf"
+        >
           {messages.banner.downloadCv}
         </a>
       </div>

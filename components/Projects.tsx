@@ -4,7 +4,7 @@ import projects from "@/content/projects.json";
 import styles from "./Projects.module.scss";
 import {
   Locale,
-  MultilingualString,
+  MaybeMultilingualString,
   getMultilingualContent,
 } from "@/util/i18n";
 
@@ -45,12 +45,12 @@ function ProjectItem({
   messages,
   locale,
 }: {
-  description: MultilingualString;
+  description: MaybeMultilingualString;
   image: StaticImageData | string;
   projectUrl?: string;
   sourceCodeUrl?: string;
   technologies: Technology[];
-  title: MultilingualString;
+  title: MaybeMultilingualString;
   messages: any;
   locale: Locale;
 }) {

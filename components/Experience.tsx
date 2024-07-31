@@ -5,8 +5,8 @@ import { formatDateRange } from "@/util/date-time";
 import styles from "./Experience.module.scss";
 import {
   Locale,
-  MultilingualList,
-  MultilingualString,
+  MaybeMultilingualList,
+  MaybeMultilingualString,
   getMultilingualContent,
 } from "@/util/i18n";
 
@@ -42,11 +42,11 @@ export default function ExperienceTimeline({
 interface ExperienceItem {
   startDate: Date;
   endDate?: Date;
-  url?: MultilingualString;
+  url?: MaybeMultilingualString;
   image: StaticImageData | string;
-  company: MultilingualString;
-  title: MultilingualString;
-  keyPoints: MultilingualList;
+  company: MaybeMultilingualString;
+  title: MaybeMultilingualString;
+  keyPoints: MaybeMultilingualList;
 }
 
 function ExperienceTimelineItem({

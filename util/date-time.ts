@@ -1,4 +1,4 @@
-import { defaultLocale } from "./i18n";
+import { Locale, defaultLocale } from "./i18n";
 
 export function formatDate(date?: Date, locale = defaultLocale): string {
   if (!date) return "Heute";
@@ -11,7 +11,7 @@ export function formatDate(date?: Date, locale = defaultLocale): string {
 export function formatDateRange(
   startDate?: Date,
   endDate?: Date,
-  locale?: string
+  locale?: Locale
 ): string {
   return [startDate, endDate]
     .map((date) => formatDate(date, locale))

@@ -12,9 +12,11 @@ import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
-export async function generateMetadata(
-  { params }: { params: { locale: Locale } }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
   const messages = await getMessages(params.locale);
   return messages.metadata;
 }

@@ -3,8 +3,8 @@ import rawEducation from "@/content/education.json";
 import styles from "./Education.module.scss";
 import {
   Locale,
-  MultilingualList,
-  MultilingualString,
+  MaybeMultilingualList,
+  MaybeMultilingualString,
   getMultilingualContent,
 } from "@/util/i18n";
 
@@ -34,13 +34,13 @@ export default function Education({
 }
 
 interface EducationItem {
-  educator: MultilingualString;
+  educator: MaybeMultilingualString;
   endDate?: Date;
   image: string;
-  keyPoints: MultilingualList;
+  keyPoints: MaybeMultilingualList;
   startDate: Date;
-  title: MultilingualString;
-  url?: MultilingualString;
+  title: MaybeMultilingualString;
+  url?: MaybeMultilingualString;
 }
 
 function EducationTimelineItem({
