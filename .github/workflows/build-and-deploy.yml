@@ -1,7 +1,7 @@
-name: Build
+name: Build and deploy
 on: [push]
 jobs:
-  build_latex:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
