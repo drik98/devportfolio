@@ -1,19 +1,28 @@
 import styles from "./Contact.module.scss";
 
-export default function Contact() {
+export default function Contact({ messages }: { messages: any }) {
   return (
     <div id="contact" className={styles.contact}>
-      <h2>Kontakt</h2>
+      <h2>{messages.header.sections.contact}</h2>
       <div className={styles.contactForm}>
         <form method="POST" action="https://formspree.io/bewerbung@smtz.dev">
           <input
             type="hidden"
             name="_subject"
-            value="Kontaktanfrage via Portfolio"
+            value={messages.contact.emailSubject}
           />
-          <input type="email" name="_replyto" placeholder="E-Mail" required />
-          <textarea name="message" placeholder="Nachricht" required></textarea>
-          <button type="submit">Send</button>
+          <input
+            type="email"
+            name="_replyto"
+            placeholder={messages.contact.email}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder={messages.contact.message}
+            required
+          ></textarea>
+          <button type="submit">{messages.contact.submit}</button>
         </form>
       </div>
     </div>

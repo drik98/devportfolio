@@ -1,6 +1,12 @@
 import DetailedItem from "@/components/DetailedItem";
 import rawEducation from "@/content/education.json";
 import styles from "./Education.module.scss";
+import {
+  Locale,
+  MaybeMultilingualList,
+  MaybeMultilingualString,
+  getMultilingualContent,
+} from "@/util/i18n";
 
 const education: EducationItem[] = rawEducation.map((item) => ({
   educator: item.educator,
@@ -12,23 +18,29 @@ const education: EducationItem[] = rawEducation.map((item) => ({
   url: item.url,
 }));
 
-export default function Education() {
+export default function Education({
+  messages,
+  locale,
+}: {
+  messages: any;
+  locale: Locale;
+}) {
   return (
     <div id="education" className={styles.education}>
-      <h2 className="heading">Ausbildung</h2>
-      {education.map(EducationTimelineItem)}
+      <h2 className="heading">{messages.header.sections.education}</h2>
+      {education.map((item) => EducationTimelineItem({ ...item, locale }))}
     </div>
   );
 }
 
 interface EducationItem {
-  educator: string;
+  educator: MaybeMultilingualString;
   endDate?: Date;
   image: string;
-  keyPoints: string[];
+  keyPoints: MaybeMultilingualList;
   startDate: Date;
-  title: string;
-  url?: string;
+  title: MaybeMultilingualString;
+  url?: MaybeMultilingualString;
 }
 
 function EducationTimelineItem({
@@ -39,18 +51,20 @@ function EducationTimelineItem({
   educator,
   title,
   keyPoints,
-}: EducationItem) {
+  locale,
+}: EducationItem & { locale: Locale }) {
   return (
     <DetailedItem
       key={`${educator}-${startDate.toISOString()}`}
       showDateRange
+      locale={locale}
       startDate={startDate}
       endDate={endDate}
-      educator={educator}
-      keyPoints={keyPoints}
+      educator={getMultilingualContent(educator, locale)}
+      keyPoints={getMultilingualContent(keyPoints, locale)}
       image={image}
-      title={title}
-      url={url}
+      title={getMultilingualContent(title, locale)}
+      url={getMultilingualContent(url, locale)}
     />
   );
 }

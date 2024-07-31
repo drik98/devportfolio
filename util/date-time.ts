@@ -1,11 +1,19 @@
-export function formatDate(date?: Date): string {
+import { Locale, defaultLocale } from "./i18n";
+
+export function formatDate(date?: Date, locale = defaultLocale): string {
   if (!date) return "Heute";
-  return new Intl.DateTimeFormat("de", {
+  return new Intl.DateTimeFormat(locale, {
     month: "long",
     year: "numeric",
   }).format(date);
 }
 
-export function formatDateRange(startDate?: Date, endDate?: Date): string {
-  return [startDate, endDate].map(formatDate).join(" - ");
+export function formatDateRange(
+  startDate?: Date,
+  endDate?: Date,
+  locale?: Locale
+): string {
+  return [startDate, endDate]
+    .map((date) => formatDate(date, locale))
+    .join(" - ");
 }
