@@ -39,7 +39,7 @@
     padding: 10px;
   }
 
-  a:hover {
+  a:not(.localeLink):hover {
     color: #217dbb;
     text-decoration: none;
     background: #eee;
@@ -93,6 +93,28 @@
 
 .menu {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.localeLinkContainer {
+  display: flex;
+  margin-left: 4rem;
+}
+
+.localeLink {
+  text-transform: capitalize;
+  padding: 0 !important;
+}
+
+.localeLinkSeparator {
+  padding: 0 0.5rem;
+}
+
+.disabledLink {
+  pointer-events: none;
+
+  &.localeLink {
+    font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 768px) {

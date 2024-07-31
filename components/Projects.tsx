@@ -2,13 +2,28 @@ import { StaticImageData } from "next/image";
 import Image from "next-export-optimize-images/image";
 import projects from "@/content/projects.json";
 import styles from "./Projects.module.scss";
+import {
+  Locale,
+  MultilingualString,
+  getMultilingualContent,
+} from "@/util/i18n";
 
-export default function Projects() {
+export default function Projects({
+  messages,
+  locale,
+}: {
+  messages: any;
+  locale: Locale;
+}) {
   return (
     <div id="projects" className={`background-alt ${styles.projects}`}>
-      <h2 className="heading">Projekte</h2>
+      <h2 className="heading">{messages.header.sections.projects}</h2>
       <div className="container">
-        <div className="row">{projects.map(ProjectItem)}</div>
+        <div className="row">
+          {projects.map((project) =>
+            ProjectItem({ ...project, messages, locale })
+          )}
+        </div>
       </div>
     </div>
   );
@@ -27,38 +42,55 @@ function ProjectItem({
   sourceCodeUrl,
   technologies,
   title,
+  messages,
+  locale,
 }: {
-  description: string;
+  description: MultilingualString;
   image: StaticImageData | string;
   projectUrl?: string;
   sourceCodeUrl?: string;
   technologies: Technology[];
-  title: string;
+  title: MultilingualString;
+  messages: any;
+  locale: Locale;
 }) {
+  const translatedTitle = getMultilingualContent(title, locale);
   return (
-    <div className={`shadow-large ${styles.project}`} key={title}>
+    <div className={`shadow-large ${styles.project}`} key={translatedTitle}>
       <div className={styles.projectImage}>
         {typeof image === "string" ? (
-          <img src={image} alt={`Preview of ${title} project`} />
+          <img
+            src={image}
+            alt={messages.projects.altTextOfProjectPreview.replace(
+              "{project}",
+              title
+            )}
+          />
         ) : (
-          <Image src={image} alt={`Preview of ${title} project`} />
+          <Image
+            src={image}
+            alt={messages.projects.altTextOfProjectPreview.replace(
+              "{project}",
+              title
+            )}
+          />
         )}
       </div>
 
       <div className={styles.projectInfo}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <Technologies technologies={technologies} />
+        <h3>{translatedTitle}</h3>
+        <p>{getMultilingualContent(description, locale)}</p>
+        <Technologies technologies={technologies} messages={messages} />
         {projectUrl ? (
           <a href={projectUrl} target="_blank" rel="noopener noreferrer">
             <i className="fa fa-external-link"></i>
-            Projekt ansehen
+            {messages.projects.viewProject}
           </a>
         ) : null}
         {sourceCodeUrl ? (
           <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
             <i className="fa fa-code"></i>
-            Code ansehen
+            {messages.projects.viewCode}
           </a>
         ) : null}
       </div>
@@ -66,29 +98,48 @@ function ProjectItem({
   );
 }
 
-function Technologies({ technologies }: { technologies: Technology[] }) {
+function Technologies({
+  technologies,
+  messages,
+}: {
+  technologies: Technology[];
+  messages: any;
+}) {
   return (
     <div className={styles.projectLogos}>
-      {technologies.map(TechnologyItem)}
+      {technologies.map((technology) =>
+        TechnologyItem({ ...technology, messages })
+      )}
     </div>
   );
 }
 
-function TechnologyItem({ url, image, name }: Technology) {
+function TechnologyItem({
+  url,
+  image,
+  name,
+  messages,
+}: Technology & { messages: any }) {
   return (
     <a className={styles.projectLogoLink} href={url} key={name} target="_blank">
       {typeof image === "string" ? (
         <img
           className={styles.projectLogoImage}
           src={image}
-          alt={`Logo of ${name}`}
+          alt={messages.projects.altTextOfTechnologyLogo.replace(
+            "{technology}",
+            name
+          )}
           title={name}
         />
       ) : (
         <Image
           className={styles.projectLogoImage}
           src={image}
-          alt={`Logo of ${name}`}
+          alt={messages.projects.altTextOfTechnologyLogo.replace(
+            "{technology}",
+            name
+          )}
           title={name}
         />
       )}

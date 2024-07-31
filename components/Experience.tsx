@@ -3,6 +3,12 @@ import DetailedItem from "@/components/DetailedItem";
 import rawExperience from "@/content/experience.json";
 import { formatDateRange } from "@/util/date-time";
 import styles from "./Experience.module.scss";
+import {
+  Locale,
+  MultilingualList,
+  MultilingualString,
+  getMultilingualContent,
+} from "@/util/i18n";
 
 const experiences: ExperienceItem[] = rawExperience.map((experience) => ({
   company: experience.company,
@@ -14,12 +20,20 @@ const experiences: ExperienceItem[] = rawExperience.map((experience) => ({
   url: experience.url,
 }));
 
-export default function ExperienceTimeline() {
+export default function ExperienceTimeline({
+  messages,
+  locale,
+}: {
+  messages: any;
+  locale: Locale;
+}) {
   return (
     <div id="experience" className={`background-alt ${styles.experience}`}>
-      <h2 className="heading">Beruflicher Werdegang</h2>
+      <h2 className="heading">{messages.header.sections.experience}</h2>
       <div className={styles.experienceTimeline}>
-        {experiences.map(ExperienceTimelineItem)}
+        {experiences.map((experiences) =>
+          ExperienceTimelineItem({ ...experiences, locale })
+        )}
       </div>
     </div>
   );
@@ -28,11 +42,11 @@ export default function ExperienceTimeline() {
 interface ExperienceItem {
   startDate: Date;
   endDate?: Date;
-  url?: string;
+  url?: MultilingualString;
   image: StaticImageData | string;
-  company: string;
-  title: string;
-  keyPoints: string[];
+  company: MultilingualString;
+  title: MultilingualString;
+  keyPoints: MultilingualList;
 }
 
 function ExperienceTimelineItem({
@@ -43,7 +57,8 @@ function ExperienceTimelineItem({
   company,
   title,
   keyPoints,
-}: ExperienceItem) {
+  locale,
+}: ExperienceItem & { locale: Locale }) {
   return (
     <div
       className={styles.experienceTimelinePoint}
@@ -54,15 +69,15 @@ function ExperienceTimelineItem({
       </div>
       <div>
         <span className={styles.experienceTimelineDate}>
-          {formatDateRange(startDate, endDate)}
+          {formatDateRange(startDate, endDate, locale)}
         </span>
         <DetailedItem
           className={styles.experienceTimelineContent}
-          educator={company}
-          keyPoints={keyPoints}
+          educator={getMultilingualContent(company, locale)}
+          keyPoints={getMultilingualContent(keyPoints, locale)}
           image={image}
-          title={title}
-          url={url}
+          title={getMultilingualContent(title, locale)}
+          url={getMultilingualContent(url, locale)}
         />
       </div>
     </div>

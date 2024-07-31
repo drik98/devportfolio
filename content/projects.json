@@ -1,7 +1,13 @@
 [
   {
-    "title": "Hochzeits Website",
-    "description": "Anlässlicher meiner Hochzeit habe ich nach einer Möglichkeit gesucht die Gäste bezüglich Location, Agenda, Dresscode, etc. zu informieren. Deswegen habe ich mich kurzerhand dazu entschlossen eine kleine Website zu erstelle, die ich mittels Nuxt und static generation erstellt habe.",
+    "title": {
+      "de": "Hochzeits Website",
+      "en": "Wedding page"
+    },
+    "description": {
+      "de": "Anlässlicher meiner Hochzeit habe ich nach einer Möglichkeit gesucht die Gäste bezüglich Location, Agenda, Dresscode, etc. zu informieren. Deswegen habe ich mich kurzerhand dazu entschlossen eine kleine Website zu erstellen, die ich mittels Nuxt und static generation ausgehend von einem einfachen HTML template erstellt habe.",
+      "en": "On the occasion of my wedding I was looking for a way to inform the guests about the location, agenda, dress code, etc.. That's why I decided to create a small website using Nuxt and static generation starting from a simple html template."
+    },
     "image": "/images/projects/siewedding.png",
     "projectUrl": "https://siewedding.netlify.app/",
     "technologies": [
@@ -23,8 +29,14 @@
     ]
   },
   {
-    "title": "Mein Kochbuch",
-    "description": "Auf der Suche nach einer eleganten und praktischen Lösung zum Sichern und Anzeigen meiner Rezepte ist dieses Projekt entstanden. Dazu habe ich das bereits bestehende HTML-Template benutzt und zusammen mit gatsby und React eine Applikation geschrieben, die aus YAML-Dateien die Rezept-Seiten generieren kann. Bei dem Projekt handelt es sich um mein erstes React-Projekt.",
+    "title": {
+      "de": "Mein Kochbuch",
+      "en": "My Cookbook"
+    },
+    "description": {
+      "de": "Auf der Suche nach einer eleganten und praktischen Lösung zum Sichern und Anzeigen meiner Rezepte ist dieses Projekt entstanden. Dazu habe ich das bereits bestehende HTML-Template benutzt und zusammen mit gatsby und React eine Applikation geschrieben, die aus YAML-Dateien die Rezept-Seiten generieren kann. Bei dem Projekt handelt es sich um mein erstes React-Projekt.",
+      "en": "In search of an elegant and practical solution for saving and displaying my recipes, I created this project. I used an existing HTML template and, together with gatsby and React, wrote an application that can generate the recipe pages from YAML files. This project was my first React project."
+    },
     "image": "/images/projects/cookbook.png",
     "projectUrl": "https://cookbook.smtz.dev/",
     "sourceCodeUrl": "",
@@ -48,7 +60,10 @@
   },
   {
     "title": "Issue Transitions Sankey Chart Generator",
-    "description": "Bei einem Sprint-Review kam mir der Gedanke, dass es eine schönere Art und Weise geben muss, den Verlauf von Jira-Issues vom Beginn bis zum Ende des Sprints zu visualisieren, als in einer langweiligen Excel-Tabelle. Deshalb habe ich mich für ein Sankey-Diagramm entschieden, weil es den Mengenflus grafisch sehr schön darstellen kann. Als Entwickler möchte ich das natürlich nicht jedes Mal manuell machen müssen, also habe ich beschlossen, den Prozess zu automatisieren.",
+    "description": {
+      "de": "Bei einem Sprint-Review kam mir der Gedanke, dass es eine schönere Art und Weise geben muss, den Verlauf von Jira-Issues vom Beginn bis zum Ende des Sprints zu visualisieren, als in einer langweiligen Excel-Tabelle. Deshalb habe ich mich für ein Sankey-Diagramm entschieden, weil es den Mengenflus grafisch sehr schön darstellen kann. Als Entwickler möchte ich das natürlich nicht jedes Mal manuell machen müssen, also habe ich beschlossen, den Prozess zu automatisieren.",
+      "en": "During a sprint review, it occurred to me that there must be a nicer way to visualize the progress of Jira issues from the start to the end of the sprint than in a boring Excel spreadsheet. That's why I opted for a Sankey diagram, because it can visualize the flow of quantities very nicely. As a developer, I obviously don't want to have to do this manually every time, so I decided to automate the process."
+    },
     "image": "/images/projects/issue-transitions.png",
     "projectUrl": "https://issue-transitions.smtz.dev/",
     "sourceCodeUrl": "",
@@ -71,8 +86,14 @@
     ]
   },
   {
-    "title": "Motorsportkalender",
-    "description": "Da bei den vielen Rennen oft der Überblick verloren geht, haben meine Freunde und ich alle Rennen gemeinsam in einer Google Sheets Datei gesammelt. Damit wir einen funktionalen Überblick über die aktuellen Rennen haben, ist hiermit mein erstes vue.js-Projekt entstanden. Beim Build werden die Daten aus der Google Sheets Datei gezogen und mittels Gridsome die statischen Seiten generiert und über Netlify deployed. Durch einen Build Hook bleiben die Daten immer aktuell.",
+    "title": {
+      "de": "Motorsportkalender",
+      "en": "Motorsport calendar"
+    },
+    "description": {
+      "de": "Da bei den vielen Rennen oft der Überblick verloren geht, haben meine Freunde und ich alle Rennen gemeinsam in einer Google Sheets Datei gesammelt. Damit wir einen schönen Überblick über die aktuellen Rennen haben, habe ich hiermit mein erstes vue.js-Projekt erstellt. Beim Build werden die Daten aus der Google Sheets Datei gezogen und mittels Gridsome die statischen Seiten generiert und über Netlify deployed. Durch einen Build Hook bleiben die Daten immer aktuell.",
+      "en": "As we often lose track of the many races, my friends and I have collected all the races together in a Google Sheets file. To give us a nice overview of the current races, I have created my first vue.js project. During the build, the data is pulled from the Google Sheets file and the static pages are generated using Gridsome and deployed via Netlify. A build hook ensures that the data is always up to date."
+    },
     "image": "/images/projects/motorsportcalendar.png",
     "projectUrl": "https://motorsport-calendar.smtz.dev/",
     "sourceCodeUrl": "",
@@ -95,8 +116,14 @@
     ]
   },
   {
-    "title": "Motorsportkalender 2.0",
-    "description": "Diese Webanwendung ist der Nachfolger vom vue/gridsome-basierten Motorsportkalender. Obwohl Gridsome zum Zeitpunkt der Erstellung ein praktisches Tool war, konnte es wird es wohl leider nicht auf vue 3 migriert. Da ich die Anwendung aber weiter entwickeln wollte mit vue 3 und typescript, habe mich entschieden das Projekt mit nuxt wiederzubeleben. Das bietet mir auch eine Chance an zu sehen, wie ich mich selbst seit der Erstellung des ersten Motorsportkalenders weiterentwickelt habe. Das Projekt ist noch work in progress, kann aber trotzdem schon mal angesehen werden.",
+    "title": {
+      "de": "Motorsportkalender 2.0",
+      "en": "Motorsport calendar 2.0"
+    },
+    "description": {
+      "de": "Diese Webanwendung ist der Nachfolger vom vue/gridsome-basierten Motorsportkalender. Obwohl Gridsome zum Zeitpunkt der Erstellung ein praktisches Tool war, konnte es wird es wohl leider nicht auf vue 3 migriert. Da ich die Anwendung aber weiter entwickeln wollte mit vue 3 und typescript, habe mich entschieden das Projekt mit nuxt wiederzubeleben. Das bietet mir auch eine Chance an zu sehen, wie ich mich selbst seit der Erstellung des ersten Motorsportkalenders weiterentwickelt habe. Das Projekt ist noch work in progress, kann aber trotzdem schon mal angesehen werden.",
+      "en": "This web application is the successor to the vue/gridsome-based motorsport calendar. Although gridsome was a handy tool at the time of creation, it will unfortunately not be migrated to vue 3. But since I wanted to continue developing the application with vue 3 and typescript, I decided to revive the project with nuxt. This also gives me a chance to see how I have developed myself since creating the first motorsport calendar. The project is still work in progress, but you can have a look at it anyway."
+    },
     "image": "/images/projects/motorsportcalendar.png",
     "projectUrl": "",
     "sourceCodeUrl": "https://github.com/drik98/motorsport-calendar-nuxt-3",
@@ -125,7 +152,10 @@
   },
   {
     "title": "Aixperanto",
-    "description": "Bei Aixperanto handelt es sich um eine Applikation zur Darstellung von Prozessen mittels der gleichnamigen Prozessmodellierungssprache aixperanto. Das Programm habe ich im ersten Jahr meiner Ausbildung am WZL in der Programmiersprache VBA für das Office Programm Microsoft Visio geschrieben. Dabei liest das Programm die Informationen der einzelnen Prozessschritte und deren Verbindungen aus und platziert diese automatisch in den zugehörigen Swimlanes.",
+    "description": {
+      "de": "Bei Aixperanto handelt es sich um eine Applikation zur Darstellung von Prozessen mittels der gleichnamigen Prozessmodellierungssprache aixperanto. Das Programm habe ich im ersten Jahr meiner Ausbildung am WZL in der Programmiersprache VBA für das Office Programm Microsoft Visio geschrieben. Dabei liest das Programm die Informationen der einzelnen Prozessschritte und deren Verbindungen aus und platziert diese automatisch in den zugehörigen Swimlanes.",
+      "en": "Aixperanto is an application for displaying processes using the process modeling language of the same name, aixperanto. I wrote the program in the first year of my training at the WZL in the VBA programming language for the Microsoft Visio office program. The program reads the information of the individual process steps and their connections and automatically places them in the corresponding swimlanes."
+    },
     "image": "/images/projects/aixperanto.jpg",
     "projectUrl": "",
     "sourceCodeUrl": "",
@@ -144,7 +174,10 @@
   },
   {
     "title": "OptiWo",
-    "description": "Bei dem Projekt OptiWo handelt es sich um eine Webanwendung mit Java-Backend. OptiWo bietet eine datenbasierte Unterstützung bei der Gestaltung globaler Produktionsnetzwerke. Bei OptiWo habe ich während dem dritten Ausbildungsjahr am WZL mit entwickelt. Dabei habe ich hauptsächlich das Design angepasst und die verschiedenen Views weiterentwickelt.",
+    "description": {
+      "de": "Bei dem Projekt OptiWo handelt es sich um eine Webanwendung mit Java-Backend. OptiWo bietet eine datenbasierte Unterstützung bei der Gestaltung globaler Produktionsnetzwerke. Bei OptiWo habe ich während dem dritten Ausbildungsjahr am WZL mit entwickelt. Dabei habe ich hauptsächlich das Design angepasst und die verschiedenen Views weiterentwickelt.",
+      "en": "The OptiWo project is a web application with a Java backend. OptiWo offers data-based support in the design of global production networks. I helped develop OptiWo during my third year of training at the WZL. I mainly adapted the design and further developed the various views."
+    },
     "image": "/images/projects/optiwo.jpg",
     "projectUrl": "",
     "sourceCodeUrl": "",

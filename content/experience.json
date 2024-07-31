@@ -1,47 +1,87 @@
 [
   {
     "company": "itemis AG",
-    "url": "https://www.itemis.com/",
+    "url": {
+      "de": "https://www.itemis.com/",
+      "en": "https://www.itemis.com/en/"
+    },
     "startDate": "2023-12-01",
     "title": "Senior Software Engineer",
     "image": "/images/experience/itemis.svg",
-    "keyPoints": [
-      "Schlüsselrolle bei der Gestaltung der Threat Analysis and Risk Assessment (TARA) durch itemis SECURE, mit dem Ziel der strikten Einhaltung der ISO 21434 Standards",
-      "Vorantreiben der Mission, TARA mit einem benutzerfreundlichen Ansatz unter Verwendung von Vue.js in Verbindung mit modelix ins Web zu bringen",
-      "Durchsetzung hoher Qualitätsstandards für Clean Code und Best Practices in der Softwareentwicklung",
-      "Weiterentwicklung des Tech-Stacks durch die Einführung neuer und fortschrittlicher Technologien",
-      "Verbesserung der Entwicklungserfahrung durch die Optimierung von Workflows",
-      "Entwicklung von APIs und Etablierung der Kommunikation zwischen Diensten mit Kotlin"
-    ]
+    "keyPoints": {
+      "de": [
+        "Schlüsselrolle bei der Gestaltung der Threat Analysis and Risk Assessment (TARA) durch itemis SECURE, mit dem Ziel der strikten Einhaltung der ISO 21434 Standards",
+        "Vorantreiben der Mission, TARA mit einem benutzerfreundlichen Ansatz unter Verwendung von Vue.js in Verbindung mit modelix ins Web zu bringen",
+        "Durchsetzung hoher Qualitätsstandards für Clean Code und Best Practices in der Softwareentwicklung",
+        "Weiterentwicklung des Tech-Stacks durch die Einführung neuer und fortschrittlicher Technologien",
+        "Verbesserung der Entwicklungserfahrung durch die Optimierung von Workflows",
+        "Entwicklung von APIs und Etablierung der Kommunikation zwischen Diensten mit Kotlin"
+      ],
+      "en": [
+        "Key role in shaping the trajectory of Threat Analysis and Risk Assessment (TARA) through itemis SECURE, aiming for strict adherence to ISO 21434 standards.",
+        "Driving the mission to bring TARA to the web with a user-friendly approach using Vue.js in conjunction with modelix.",
+        "Enforcing high-quality standards of clean code and best practices in software development.",
+        "Evolving the tech stack by introducing newer and more advanced technologies.",
+        "Enhancing the development experience by streamlining workflows for fellow developers.",
+        "Developing APIs and establishing cross-service communication using Kotlin."
+      ]
+    }
   },
   {
     "company": "aixigo AG",
-    "url": "https://www.aixigo.com/",
+    "url": {
+      "de": "https://www.aixigo.com/de/home",
+      "en": "https://www.aixigo.com/"
+    },
     "startDate": "2020-12-01",
     "endDate": "2023-11-30",
     "title": "Software Engineer",
     "image": "/images/experience/aixigo.svg",
-    "keyPoints": [
-      "Leitung der Entwicklung von Micro Frontends, hauptsächlich unter Verwendung von Vue.js",
-      "Federführung bei der Entwicklung und Konzeption von Fintech-Microservices mit Vue.js und Java EE",
-      "Zentrale Rolle bei der Modernisierung des Tech-Stacks durch die Einführung von TypeScript und Storybook",
-      "Einsatz für hochwertige Softwareentwicklung und Betonung von Clean Code",
-      "Aktive Mitwirkung an der Verbesserung des CI/CD-Prozesses",
-      "Verantwortung für die Einarbeitung neuer Teammitglieder, Bereitstellung von Anleitung und Coaching für eine reibungslose Integration",
-      "Teilnahme an einem Mentorenprogramm, um sich als Führungskraft weiterzuentwickeln"
-    ]
+    "keyPoints": {
+      "de": [
+        "Leitung der Entwicklung von Micro Frontends, hauptsächlich unter Verwendung von Vue.js",
+        "Federführung bei der Entwicklung und Konzeption von Fintech-Microservices mit Vue.js und Java EE",
+        "Zentrale Rolle bei der Modernisierung des Tech-Stacks durch die Einführung von TypeScript und Storybook",
+        "Einsatz für hochwertige Softwareentwicklung und Betonung von Clean Code",
+        "Aktive Mitwirkung an der Verbesserung des CI/CD-Prozesses",
+        "Verantwortung für die Einarbeitung neuer Teammitglieder, Bereitstellung von Anleitung und Coaching für eine reibungslose Integration",
+        "Teilnahme an einem Mentorenprogramm, um sich als Führungskraft weiterzuentwickeln"
+      ],
+      "en": [
+        "Led the development of Micro Frontends primarily using Vue.js.",
+        "Spearheaded the development and conceptualization of Fintech Microservices using Vue.js and Java EE.",
+        "Played a central role in modernizing the tech stack by introducing TypeScript and Storybook.",
+        "Advocated for high-quality software development, emphasizing code excellence.",
+        "Actively contributed to enhancing the CI/CD process.",
+        "Took charge of onboarding new team members, providing guidance and coaching for smooth integration.",
+        "Participation in mentoring program to develop as a leader."
+      ]
+    }
   },
   {
     "company": "Werkzeugmaschinenlabor WZL der RWTH Aachen",
-    "url": "https://www.wzl.rwth-aachen.de/",
+    "url": {
+      "de": "https://www.wzl.rwth-aachen.de/",
+      "en": "https://www.wzl.rwth-aachen.de/cms/~sijq/wzl/?lidx=1"
+    },
     "startDate": "2019-10-01",
     "endDate": "2020-11-30",
-    "title": "Software Engineer (Studentische Hilfskraft)",
+    "title": {
+      "de": "Software Engineer (Studentische Hilfskraft)",
+      "en": "Software Engineer (Student Assistant)"
+    },
     "image": "/images/experience/wzl.png",
-    "keyPoints": [
-      "Förderung der Modernisierung des Tech-Stacks durch Proof of Concepts und die Einführung von Frameworks wie Vue.js und Spring Boot",
-      "Etablierung eines standardisierten CI/CD-Prozesses",
-      "Einarbeitung, Unterstützung und Mentoring für neue Auszubildende und Kollegen"
-    ]
+    "keyPoints": {
+      "de": [
+        "Förderung der Modernisierung des Tech-Stacks durch Proof of Concepts und die Einführung von Frameworks wie Vue.js und Spring Boot",
+        "Etablierung eines standardisierten CI/CD-Prozesses",
+        "Einarbeitung, Unterstützung und Mentoring für neue Auszubildende und Kollegen"
+      ],
+      "en": [
+        "Promoted modernization of the tech stack through proof of concepts and introducing frameworks like Vue.js and Spring Boot.",
+        "Established a standardized CI/CD process.",
+        "Provided training, teaching, and support to new apprentices and colleagues."
+      ]
+    }
   }
 ]

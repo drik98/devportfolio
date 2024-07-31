@@ -1,27 +1,52 @@
 [
   {
-    "educator": "Fachhochschule Aachen",
-    "url": "https://www.fh-aachen.de/",
+    "educator": "FH Aachen - University of Applied Sciences",
+    "url": {
+      "de": "https://www.fh-aachen.de/studium/studiengaenge/angewandte-mathematik-und-informatik-bsc-dual",
+      "en": "https://www.fh-aachen.de/en/studies/degree-programmes/applied-mathematics-and-computer-science-dual-bsc"
+    },
     "startDate": "2016-09-01",
     "endDate": "2020-08-31",
     "title": "Bachelor of Science in Scientific Programming",
     "image": "/images/education/fhaachen.jpg",
-    "keyPoints": [
-      "Thesis-Thema: Entwicklung von Bewertungsansätzen für ausgewählte Process Mining Algorithmen in der Auftragsabwicklung"
-    ]
+    "keyPoints": {
+      "de": [
+        "Thesis-Thema: Entwicklung von Bewertungsansätzen für ausgewählte Process Mining Algorithmen in der Auftragsabwicklung"
+      ],
+      "en": [
+        "Thesis: Development of evaluation approaches for selected process mining algorithms in order processing."
+      ]
+    }
   },
   {
-    "educator": "Werkzeugmaschinenlabor WZL der RWTH Aachen",
-    "url": "https://www.wzl.rwth-aachen.de/",
+    "educator": {
+      "de": "Werkzeugmaschinenlabor WZL der RWTH Aachen",
+      "en": "Laboratory for Machine Tools and Production Engineering (WZL) of RWTH Aachen University"
+    },
+    "url": {
+      "de": "https://www.wzl.rwth-aachen.de/",
+      "en": "https://www.wzl.rwth-aachen.de/cms/~sijq/wzl/?lidx=1"
+    },
     "startDate": "2016-09-01",
     "endDate": "2019-08-31",
-    "title": "Ausbildung zum Mathematisch-technischem Softwareentwickler",
+    "title": {
+      "de": "Ausbildung zum Mathematisch-technischem Softwareentwickler",
+      "en": "Training as mathematical-technical software developer"
+    },
     "image": "/images/experience/wzl.png",
-    "keyPoints": [
-      "Entwicklung von Java-Webanwendungen für industrielle Anwendungen, mit Schwerpunkt auf Frontend-Entwicklung von Software- Demonstratoren in Industrie 4.0",
-      "Nutzung von Technologien wie JavaScript, HTML, CSS, Java, PostgreSQL und Hibernate",
-      "Erfassung von Anforderungen und Konzeption von Anwendungen",
-      "Betreuung von Auszubildenden"
-    ]
+    "keyPoints": {
+      "de": [
+        "Entwicklung von Java-Webanwendungen für industrielle Anwendungen, mit Schwerpunkt auf Frontend-Entwicklung von Software- Demonstratoren in Industrie 4.0",
+        "Nutzung von Technologien wie JavaScript, HTML, CSS, Java, PostgreSQL und Hibernate",
+        "Erfassung von Anforderungen und Konzeption von Anwendungen",
+        "Betreuung von Auszubildenden"
+      ],
+      "en": [
+        "Development of Java web applications for industrial applications, with a focus on front-end development of software demonstrators in Industry 4.0",
+        "Use of technologies such as JavaScript, HTML, CSS, Java, PostgreSQL and Hibernate",
+        "Gathering requirements and designing applications",
+        "Supervision of trainees"
+      ]
+    }
   }
 ]
