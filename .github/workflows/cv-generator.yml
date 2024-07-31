@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX documents
 on: [push]
 jobs:
   build_latex:
@@ -6,15 +6,22 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document (de)
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv/cv_hendrik_schmitz_de.tex
           continue_on_error: "true"
         env:
           TEXINPUTS: ".:./cv//:"
+      - name: Compile LaTeX document (en)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv/cv_hendrik_schmitz_en.tex
+          continue_on_error: "true"
+        env:
+          TEXINPUTS: ".:./cv//:"
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: cv_hendrik_schmitz_de.pdf
+          name: cvs
+          path: cv_hendrik_schmitz_*.pdf
