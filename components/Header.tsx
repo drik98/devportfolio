@@ -3,14 +3,14 @@
 import clsx from "clsx";
 import { useState } from "react";
 import styles from "./Header.module.scss";
-import { Locale, supportedLocales } from "@/util/i18n";
+import { Locale, Messages, supportedLocales } from "@/util/i18n";
 import React from "react";
 
 export default function Header({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);

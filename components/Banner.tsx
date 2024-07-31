@@ -1,11 +1,11 @@
-import { Locale } from "@/util/i18n";
+import { Locale, Messages } from "@/util/i18n";
 import styles from "./Banner.module.scss";
 
 export default function Banner({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   return (

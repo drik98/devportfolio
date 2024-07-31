@@ -24,7 +24,7 @@ export default function ExperienceTimeline({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   return (

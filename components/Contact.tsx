@@ -1,6 +1,7 @@
+import { Messages } from "@/util/i18n";
 import styles from "./Contact.module.scss";
 
-export default function Contact({ messages }: { messages: any }) {
+export default function Contact({ messages }: { messages: Messages }) {
   return (
     <div id="contact" className={styles.contact}>
       <h2>{messages.header.sections.contact}</h2>

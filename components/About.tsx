@@ -3,7 +3,7 @@ import experience from "@/content/experience.json";
 import profilePic from "@/cv/profile_picture.jpg";
 import styles from "./About.module.scss";
 import { formatDate } from "@/util/date-time";
-import { Locale } from "@/util/i18n";
+import { Locale, Messages } from "@/util/i18n";
 
 const birthDate = new Date("1998-06-30");
 const currentDate = new Date();
@@ -17,13 +17,13 @@ export default function About({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   const aboutMyself = messages.about.myself
-    .replace("{currentAge}", currentAge)
+    .replace("{currentAge}", String(currentAge))
     .replace("{startDate}", formatDate(new Date(currentJob.startDate), locale))
-    .replace("{jobTitle}", currentJob.title)
+    .replace("{jobTitle}", String(currentJob.title))
     .replace("{company}", currentJob.company);
 
   return (

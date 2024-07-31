@@ -1,3 +1,6 @@
+import defaultMessages from '@/messages/de.json';
+export type Messages = typeof defaultMessages;
+
 export enum Locale {
   de = "de",
   en = "en",

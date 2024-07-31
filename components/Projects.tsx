@@ -5,6 +5,7 @@ import styles from "./Projects.module.scss";
 import {
   Locale,
   MaybeMultilingualString,
+  Messages,
   getMultilingualContent,
 } from "@/util/i18n";
 
@@ -12,7 +13,7 @@ export default function Projects({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   return (
@@ -51,7 +52,7 @@ function ProjectItem({
   sourceCodeUrl?: string;
   technologies: Technology[];
   title: MaybeMultilingualString;
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   const translatedTitle = getMultilingualContent(title, locale);
@@ -103,7 +104,7 @@ function Technologies({
   messages,
 }: {
   technologies: Technology[];
-  messages: any;
+  messages: Messages;
 }) {
   return (
     <div className={styles.projectLogos}>
@@ -119,7 +120,7 @@ function TechnologyItem({
   image,
   name,
   messages,
-}: Technology & { messages: any }) {
+}: Technology & { messages: Messages }) {
   return (
     <a className={styles.projectLogoLink} href={url} key={name} target="_blank">
       {typeof image === "string" ? (

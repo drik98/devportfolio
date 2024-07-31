@@ -5,6 +5,7 @@ import {
   Locale,
   MaybeMultilingualList,
   MaybeMultilingualString,
+  Messages,
   getMultilingualContent,
 } from "@/util/i18n";
 
@@ -22,7 +23,7 @@ export default function Education({
   messages,
   locale,
 }: {
-  messages: any;
+  messages: Messages;
   locale: Locale;
 }) {
   return (
