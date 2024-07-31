@@ -64,7 +64,7 @@ function ProjectItem({
             src={image}
             alt={messages.projects.altTextOfProjectPreview.replace(
               "{project}",
-              title
+              translatedTitle
             )}
           />
         ) : (
@@ -72,7 +72,7 @@ function ProjectItem({
             src={image}
             alt={messages.projects.altTextOfProjectPreview.replace(
               "{project}",
-              title
+              translatedTitle
             )}
           />
         )}
