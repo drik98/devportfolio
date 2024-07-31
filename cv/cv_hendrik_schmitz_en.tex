@@ -1,0 +1,208 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty One Seconds Resume/CV
+% LaTeX Template
+% Version 1.2 (2024/06/26)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+%
+% License
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Alessandro Trinca Tornidor (alessandro at trinca dot tornidor dot com)
+%% Copyright 2022-now Alessandro Trinca Tornidor (alessandro at trinca dot tornidor dot com)
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Alessandro Trinca Tornidor
+%
+% This work consists of the files template.tex and twentyonesecondcv.cls
+% and the derived file twentyonesecondcv.pdf
+%
+% see https://github.com/trincadev/cv-latex-twentyoneseconds/ for updates
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentyonesecondcv} % a4paper for A4
+
+\usepackage[shortlabels]{enumitem}
+
+\profilepic{profile_picture.jpg} % Profile picture
+\cvjobtitle{Software Engineer} % Job title/career
+\cvname{Hendrik Schmitz} % Your name
+
+%% Mandatory informations used by \makeinfoprofile. To hide these fields leave the contents of the macro empty (e.g. '\cvsitepersonal{}' instead than '\cvsitepersonal{en.wikipedia.org}')
+%% See https://tex.stackexchange.com/a/692525/109031
+\cvbirthdate{30 June 1998}
+\cvnumberphone{+49 151 70013949}
+\cvaddressurl{}
+\cvaddress{Pontstr. 137, 52062 Aachen}        % Short address/location, use \newline if more than 1 line is required
+\cvsitepersonal{smtz.dev}       % personal site
+\cvstackoverflow{}
+\cvlinkedin{hendriksmtz}
+\cvskypeurlbase{} % Skype 
+\cvskypeurl{}
+\cvgithub{drik98}     
+\cvmail{hendrik@smtz.dev}
+
+\textfootersidenote{}
+
+\pagenumber{Page}{of}
+
+\begin{document}
+\sidesection{
+    \makeheaderprofile
+    % \makeheaderprofilenoimg
+    \makeinfoprofile
+    % \aboutme{Short section about myself.}
+    % \customsidesection{Header profile section}{It's possible to hide the profile picture using \textbackslash\texttt{makeheaderprofilenoimg} instead than \textbackslash\texttt{makeheaderprofile} (you could remove  \textbackslash\texttt{profilepic\{image.png\}} then).}
+    %\customsidesection{Info profile section}{The command \textbackslash\texttt{makeinfoprofile} doesn't use empty macros \textbackslash\texttt{cvsite*\{\}} (e.g. \textbackslash\texttt{cvsitepersonal\{\}} instead than \textbackslash\texttt{cvsitepersonal\{example.com\}}).}
+    %\customsidesection{About the info profile commands}{If not empty the \textbackslash\texttt{cvaddressurl\{\}} command create a custom hyperlink containing the \textbackslash\texttt{cvaddress\{Address, Nation\}} text. Same for \textbackslash\texttt{cvskypeurlbase\{join.skype.com/...\}} and \textbackslash\texttt{cvskypeurl\{skype-username\}} (visit \colorhrefcustom{https://support.skype.com/en/faq/FA34802/}{skype FAQs}) to create an invite url.}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \customskills{Languages}{{French (Intermediate)/3.5},{English (Mastery)/5},{German (Native)/6}}{}
+    
+    \customskills{Programming Languages}{{Shell/4},{Python/4},{Java\char`\/Kotlin/5.5},{CSS\char`\/SCSS/5.5},{JavaScript\char`\/Typescript/6}}{Scale: 0 (basic skills) - 6 (expert)}
+    
+    \makefootersidenodevfill
+    
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for some reason it's impossible to have a new line here...
+\mainsection{
+    
+    \section{About}
+
+    In my eight-year professional career, I have gained extensive experience in frontend development, specializing in Vue.js. In addition, I have extensive knowledge of the back-end, having primarily worked with Java and Kotlin before. This experience allows me to collaborate effectively on both front-end and back-end development and ensure seamless integrations.
+    \newline Thanks to my in-depth expertise and extensive experience, I am able to work effectively with various stakeholders in software development, including product owners, designers, backend developers and DevOps experts.
+    
+    \section{Experiences}
+    
+    \begin{twenty}
+      \twentyitem
+        {since 2023}
+        {Senior Software Engineer}
+        {\newline itemis AG}
+        {
+        \vspace{-3mm}
+        \begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+          \item Key role in shaping the trajectory of Threat Analysis and Risk Assessment (TARA) through itemis SECURE, aiming for strict adherence to ISO 21434 standards.
+          \item Driving the mission to bring TARA to the web with a user-friendly approach using Vue.js in conjunction with modelix.
+          \item Enforcing high-quality standards of clean code and best practices in software development.
+          \item Evolving the tech stack by introducing newer and more advanced technologies.
+          \item Enhancing the development experience by streamlining workflows for fellow developers.
+          \item Developing APIs and establishing cross-service communication using Kotlin.
+        \end{itemize}
+        }
+      \twentyitem
+        {2020-2023}
+        {Software Engineer}
+        {\newline aixigo AG}
+        {
+        \vspace{-3mm}
+        \begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+          \item Led the development of Micro Frontends primarily using Vue.js.
+          \item Spearheaded the development and conceptualization of Fintech Microservices using Vue.js and Java EE.
+          \item Played a central role in modernizing the tech stack by introducing TypeScript and Storybook.
+          \item Advocated for high-quality software development, emphasizing code excellence.
+          \item Actively contributed to enhancing the CI/CD process.
+          \item Took charge of onboarding new team members, providing guidance and coaching for smooth integration.
+          \item Participation in mentoring program to develop as a leader.
+        \end{itemize}
+        }
+      \twentyitem
+        {2019-2020}
+        {Software Engineer (Student Assistant)}
+        {\newline Werkzeugmaschinenlabor WZL der RWTH Aachen}
+        {
+        \vspace{-3mm}
+         \begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+          \item Promoted modernization of the tech stack through proof of concepts and introducing frameworks like Vue.js and Spring Boot.
+          \item Established a standardized CI/CD process.
+          \item Provided training, teaching, and support to new apprentices and colleagues.
+        \end{itemize}
+        }
+      \twentyitem
+        {2016-2019}
+        {Dual Study Mathematical-technical software developer}
+        {\newline Werkzeugmaschinenlabor WZL der RWTH Aachen}
+        {
+        \vspace{-3mm}
+        \begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+          \item Contributed to the development of Java web applications for industrial applications, focusing on frontend development of software demonstrators in Industry 4.0.
+          \item Utilized technologies such as JavaScript, HTML, CSS, Java, PostgreSQL and Hibernate.
+          \item Recording of requirements and conception of applications.
+          \item Supervision of trainees
+        \end{itemize}
+        }
+    \end{twenty}
+
+%% end main section
+}
+% \newpage
+
+\clearpage  % mandatory to make it work the command '\pagenumber'
+
+% \noindent
+\sidesection{
+    \makeheaderprofilenoimg
+
+
+  
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \customskills{Frameworks \& Technologies}{{React/4},{Docker\char`\/Kubernetes/4},{Nuxt/4.5},{CI\char`\/CD/5},{Quarkus\char`\/Spring/5.5},{Vue.js/6}}{}
+
+    \customskills{Agile Development}{{Product Owner/2},{Kanban/3},{Scrum Master/4},{Scrum/5}}{Scale: 0 (basic skills) - 6 (expert)}
+
+    \makefooterprofile{}
+    
+    \makefootersidenode
+    
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for some reason there is no way to have a new line here...
+\mainsection{
+
+    \section{Other Education and certifications}
+    
+    \begin{twentymid} % Environment for a list with descriptions  
+      \twentyitem
+        {2016-2020}
+        {B.Sc. Scientific Programming}
+        {\newline FH Aachen - University of Applied Sciences }
+        {Thesis: Development of evaluation approaches for selected process mining algorithms in order processing.}
+      \vspace{-3mm}
+      \twentyitem
+        {2016-2019}
+        {Training as mathematical-technical software developer}
+        {\newline Industrie- und Handelskammer (IHK) Aachen}
+        {}
+      \vspace{-3mm}
+      \twentyitem
+        {2016}
+        {Abitur}
+        {\newline Dalton Gymnasium Alsdorf}
+        {}
+      %\vspace{-12mm}
+        
+    \end{twentymid}
+    
+}
+\end{document}

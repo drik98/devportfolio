@@ -1,0 +1,49 @@
+name: Build
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Compile LaTeX document (de)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv/cv_hendrik_schmitz_de.tex
+          continue_on_error: "true"
+        env:
+          TEXINPUTS: ".:./cv//:"
+      - name: Compile LaTeX document (en)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv/cv_hendrik_schmitz_en.tex
+          continue_on_error: "true"
+        env:
+          TEXINPUTS: ".:./cv//:"
+      - name: Upload PDF files
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvs
+          path: cv_hendrik_schmitz_*.pdf
+      - name: Copy generated pdf files to public directory
+        run: |
+          mkdir -p public
+          cp -R *.pdf public/
+      - name: Install dependencies
+        run: npm install
+      - name: Build Next.js app
+        run: npm run build
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './out'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
