@@ -7,6 +7,7 @@ import {
   Locale,
   MaybeMultilingualList,
   MaybeMultilingualString,
+  Messages,
   getMultilingualContent,
 } from "@/util/i18n";
 
