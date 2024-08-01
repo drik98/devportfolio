@@ -7,6 +7,9 @@ import categories from "@/content/skill-categories.json";
 import { formatDateRangeCV } from '@/util/date-time';
 import { Locale, getMessages, getMultilingualContent, supportedLocales } from '@/util/i18n';
 
+const SLASH_SEPARATOR_CHAR = "\\char`\\/";
+const sanitze = (value: string) => value.replaceAll("/", SLASH_SEPARATOR_CHAR).replaceAll("&", "\\&")
+
 const displayedSkills = skills.filter(skill => !skill.hideOnCv);
 
 for(const locale of supportedLocales) {
@@ -31,7 +34,7 @@ async function generateTemplate(locale: Locale) {
           const groupedSkills = displayedSkills.filter(otherSkill => otherSkill.groupWith === name);
           return {
             ...skill,
-            label: [name,...groupedSkills.map(groupedSkill => getMultilingualContent(groupedSkill.name,locale))].join("\\char`\\/")
+            label: [name,...groupedSkills.map(groupedSkill => getMultilingualContent(groupedSkill.name,locale))].join("/")
           }
         })
       }
@@ -41,7 +44,7 @@ async function generateTemplate(locale: Locale) {
 
     const makeCustomSkills = (skillCategory: typeof firstCategory) => {
       const sortedSkills = skillCategory.skills.sort((a,b) => a.level - b.level)
-      return String.raw`\customskills{${skillCategory.label}}{${sortedSkills.map(skill => `${skill.label}/${skill.level}`)}}{}`;
+      return String.raw`\customskills{${sanitze(skillCategory.label)}}{${sortedSkills.map(skill => `${sanitze(skill.label)}/${skill.level}`)}}{}`;
     }
 
   
