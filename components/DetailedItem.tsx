@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import Image from "next-export-optimize-images/image";
 import styles from "./DetailedItem.module.scss";
 import { formatDateRange } from "@/util/date-time";
-import { Locale } from "@/util/i18n";
+import { Locale, Messages } from "@/util/i18n";
 
 export default function DetailedItem({
   startDate,
@@ -15,6 +15,7 @@ export default function DetailedItem({
   showDateRange,
   className,
   locale,
+  messages,
 }: {
   startDate?: Date;
   endDate?: Date;
@@ -26,6 +27,7 @@ export default function DetailedItem({
   showDateRange?: boolean;
   className?: string;
   locale?: Locale;
+  messages?: Messages;
 }) {
   return (
     <div className={[styles.detailedItem, className ?? ""].join(" ")}>
@@ -40,7 +42,7 @@ export default function DetailedItem({
         <h3>{educator}</h3>
         {showDateRange ? (
           <span className="education-date">
-            {formatDateRange(startDate, endDate, locale)}
+            {formatDateRange(startDate, endDate, locale, messages)}
           </span>
         ) : null}
         <h4>{title}</h4>

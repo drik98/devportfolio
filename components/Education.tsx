@@ -29,7 +29,9 @@ export default function Education({
   return (
     <div id="education" className={styles.education}>
       <h2 className="heading">{messages.header.sections.education}</h2>
-      {education.map((item) => EducationTimelineItem({ ...item, locale }))}
+      {education.map((item) =>
+        EducationTimelineItem({ ...item, locale, messages })
+      )}
     </div>
   );
 }
@@ -53,12 +55,14 @@ function EducationTimelineItem({
   title,
   keyPoints,
   locale,
-}: EducationItem & { locale: Locale }) {
+  messages,
+}: EducationItem & { locale: Locale; messages: Messages }) {
   return (
     <DetailedItem
       key={`${educator}-${startDate.toISOString()}`}
       showDateRange
       locale={locale}
+      messages={messages}
       startDate={startDate}
       endDate={endDate}
       educator={getMultilingualContent(educator, locale)}

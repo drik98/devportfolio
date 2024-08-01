@@ -33,7 +33,7 @@ export default function ExperienceTimeline({
       <h2 className="heading">{messages.header.sections.experience}</h2>
       <div className={styles.experienceTimeline}>
         {experiences.map((experiences) =>
-          ExperienceTimelineItem({ ...experiences, locale })
+          ExperienceTimelineItem({ ...experiences, locale, messages })
         )}
       </div>
     </div>
@@ -59,7 +59,8 @@ function ExperienceTimelineItem({
   title,
   keyPoints,
   locale,
-}: ExperienceItem & { locale: Locale }) {
+  messages,
+}: ExperienceItem & { locale: Locale; messages: Messages }) {
   return (
     <div
       className={styles.experienceTimelinePoint}
@@ -70,7 +71,7 @@ function ExperienceTimelineItem({
       </div>
       <div>
         <span className={styles.experienceTimelineDate}>
-          {formatDateRange(startDate, endDate, locale)}
+          {formatDateRange(startDate, endDate, locale, messages)}
         </span>
         <DetailedItem
           className={styles.experienceTimelineContent}

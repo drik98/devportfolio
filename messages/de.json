@@ -3,6 +3,11 @@
         "title": "Hendrik Schmitz | Mein Portfolio",
         "description": "Erfahrener Fullstack Software Engineer mit einem starken Fokus auf Frontend-Entwicklung. Entdecken Sie mein Portfolio mit innovativen Weblösungen und modernster Technologiekompetenz."
     },
+    "common": {
+        "dateTime": {
+            "today": "Heute"
+        }
+    },
     "header": {
         "sections": {
             "about": "Über mich",

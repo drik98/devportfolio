@@ -22,7 +22,10 @@ export default function About({
 }) {
   const aboutMyself = messages.about.myself
     .replace("{currentAge}", String(currentAge))
-    .replace("{startDate}", formatDate(new Date(currentJob.startDate), locale))
+    .replace(
+      "{startDate}",
+      formatDate(new Date(currentJob.startDate), locale, messages)
+    )
     .replace("{jobTitle}", String(currentJob.title))
     .replace("{company}", currentJob.company);
 

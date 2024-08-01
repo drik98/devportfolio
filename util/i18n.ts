@@ -1,4 +1,4 @@
-import defaultMessages from '@/messages/de.json';
+import defaultMessages from "@/messages/de.json";
 export type Messages = typeof defaultMessages;
 
 export enum Locale {

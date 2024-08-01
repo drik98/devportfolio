@@ -1,7 +1,12 @@
-import { Locale, defaultLocale } from "./i18n";
+import { Locale, Messages, defaultLocale } from "./i18n";
+import defaultMessages from "@/messages/de.json";
 
-export function formatDate(date?: Date, locale = defaultLocale): string {
-  if (!date) return "Heute";
+export function formatDate(
+  date?: Date,
+  locale = defaultLocale,
+  messages = defaultMessages
+): string {
+  if (!date) return messages.common.dateTime.today;
   return new Intl.DateTimeFormat(locale, {
     month: "long",
     year: "numeric",
@@ -11,9 +16,10 @@ export function formatDate(date?: Date, locale = defaultLocale): string {
 export function formatDateRange(
   startDate?: Date,
   endDate?: Date,
-  locale?: Locale
+  locale?: Locale,
+  messages?: Messages
 ): string {
   return [startDate, endDate]
-    .map((date) => formatDate(date, locale))
+    .map((date) => formatDate(date, locale, messages))
     .join(" - ");
 }
