@@ -10,6 +10,7 @@
     },
     "image": "/images/projects/devportfolio.jpg",
     "projectUrl": "https://smtz.dev/",
+    "sourceCodeUrl": "https://github.com/drik98/devportfolio",
     "technologies": [
       {
         "name": "React",
@@ -39,6 +40,7 @@
     },
     "image": "/images/projects/siewedding.png",
     "projectUrl": "https://siewedding.netlify.app/",
+    "sourceCodeUrl": "https://github.com/drik98/wedding-page",
     "technologies": [
       {
         "name": "vue.js",
@@ -68,7 +70,7 @@
     },
     "image": "/images/projects/cookbook.png",
     "projectUrl": "https://cookbook.smtz.dev/",
-    "sourceCodeUrl": "",
+    "sourceCodeUrl": "https://github.com/drik98/my-cookbook",
     "technologies": [
       {
         "name": "React",
@@ -95,7 +97,7 @@
     },
     "image": "/images/projects/issue-transitions.png",
     "projectUrl": "https://issue-transitions.smtz.dev/",
-    "sourceCodeUrl": "",
+    "sourceCodeUrl": "https://github.com/drik98/issue-transition-sankey-chart-generator",
     "technologies": [
       {
         "name": "vue.js",
@@ -125,7 +127,7 @@
     },
     "image": "/images/projects/motorsportcalendar.png",
     "projectUrl": "https://motorsport-calendar.smtz.dev/",
-    "sourceCodeUrl": "",
+    "sourceCodeUrl": "https://github.com/drik98/motorsport-calendar-vue",
     "technologies": [
       {
         "name": "vue.js",
@@ -154,7 +156,6 @@
       "en": "This web application is the successor to the vue/gridsome-based motorsport calendar. Although gridsome was a handy tool at the time of creation, it will unfortunately not be migrated to vue 3. But since I wanted to continue developing the application with vue 3 and typescript, I decided to revive the project with nuxt. This also gives me a chance to see how I have developed myself since creating the first motorsport calendar. The project is still work in progress, but you can have a look at it anyway."
     },
     "image": "/images/projects/motorsportcalendar.png",
-    "projectUrl": "",
     "sourceCodeUrl": "https://github.com/drik98/motorsport-calendar-nuxt-3",
     "technologies": [
       {
