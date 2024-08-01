@@ -9,7 +9,7 @@
       "en": "I originally created my portfolio when I was looking for a job for the first time after my dual study programme. In the beginning, it was a simple HTML template that I customised from time to time. Over time, however, the maintenance effort became too great for me, so I migrated the website to a next.js project, which generates both the static website and my CV in multiple languages from a single data source."
     },
     "image": "/images/projects/devportfolio.jpg",
-    "projectUrl": "https://siewedding.netlify.app/",
+    "projectUrl": "https://smtz.dev/",
     "technologies": [
       {
         "name": "React",
