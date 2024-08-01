@@ -181,6 +181,23 @@
     ]
   },
   {
+    "title": "modelix",
+    "description": {
+      "de": "Modelix ist eine Open-Source-Plattform für domänenspezifische Modelle im Web. Das Ziel von Modelix ist es, die Bearbeitung von Modellen im Browser zu ermöglichen und mit Modellen und Diensten um sie herum über Web-Standard-APIs zu interagieren. Während meiner Zeit bei itemis habe ich zur Entwicklung von Modelix beigetragen und hauptsächlich am Model API Generator gearbeitet, einer Kotlin-Komponente, die ein domänenspezifisches Modell für Kotlin und Typescript generiert.",
+      "en": "Modelix is a next-generation open source platform for domain-specific models on the web. The goal of Modelix is to allow editing models in the browser and to interact with models and services around them over web-standard APIs. During my time at itemis I contributed to the development of Modelix and mainly worked on the Model API Generator, a Kotlin component that generates a domain-specific model for Kotlin and Typescript."
+    },
+    "image": "/images/projects/modelix.png",
+    "sourceCodeUrl": "https://github.com/modelix/modelix.core",
+    "projectUrl": "https://modelix.org/",
+    "technologies": [
+      {
+        "name": "Kotlin",
+        "url": "https://kotlinlang.org/",
+        "image": "/images/technologies/kotlin.svg"
+      }
+    ]
+  },
+  {
     "title": "Aixperanto",
     "description": {
       "de": "Bei Aixperanto handelt es sich um eine Applikation zur Darstellung von Prozessen mittels der gleichnamigen Prozessmodellierungssprache aixperanto. Das Programm habe ich im ersten Jahr meiner Ausbildung am WZL in der Programmiersprache VBA für das Office Programm Microsoft Visio geschrieben. Dabei liest das Programm die Informationen der einzelnen Prozessschritte und deren Verbindungen aus und platziert diese automatisch in den zugehörigen Swimlanes.",
