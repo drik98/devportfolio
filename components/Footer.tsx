@@ -1,3 +1,4 @@
+import about from "@/content/about.json";
 import styles from "./Footer.module.scss";
 
 const currentYear = new Date().getFullYear();
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className={`col-sm-5 ${styles.copyright}`}>
-            <p>Copyright &copy; {currentYear} Hendrik Schmitz</p>
+            <p>Copyright &copy; {currentYear} {about.name}</p>
           </div>
           <div className={`col-sm-2 ${styles.top}`}>
             <a id="to-top" href="#">

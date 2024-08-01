@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ignore generated pdf files
+# ignore generated latex and pdf files
+*.tex
 *.pdf

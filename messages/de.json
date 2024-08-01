@@ -41,5 +41,10 @@
         "email": "E-Mail",
         "message": "Nachricht",
         "submit": "Absenden"
+    },
+    "cv": {
+        "pageNumber": "Seite",
+        "pageOf": "von",
+        "since": "seit"
     }
 }

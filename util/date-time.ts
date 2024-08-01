@@ -23,3 +23,29 @@ export function formatDateRange(
     .map((date) => formatDate(date, locale, messages))
     .join(" - ");
 }
+
+function formatDateCV(
+  date?: Date,
+  locale = defaultLocale
+): string | null{
+  if (!date) return null;
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+  }).format(date);
+}
+
+export function formatDateRangeCV(
+  startDate?: Date,
+  endDate?: Date,
+  locale = defaultLocale,
+  messages = defaultMessages
+): string {
+  const [formattedStartDate, formattedEndDate] = [startDate, endDate].map((date) => formatDateCV(date, locale));
+  if(!formattedStartDate && !formattedEndDate) {
+    return "";
+  }
+  if(!formattedEndDate) {
+    return `${messages.cv.since} ${formattedStartDate}`;
+  }
+  return `${formattedStartDate}-${formattedEndDate}`;
+}
