@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "ts-node --project ./tsconfig.node.json -r tsconfig-paths/register ./cv/generate-tex-files.ts",
     "build": "next build && next-export-optimize-images",
     "start": "serve out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-latex": "ts-node --project ./tsconfig.node.json -r tsconfig-paths/register ./cv/generate-tex-files.ts"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
