@@ -1,4 +1,5 @@
 import defaultMessages from "@/messages/de.json";
+import { notFound } from "next/navigation";
 export type Messages = typeof defaultMessages;
 
 export enum Locale {
@@ -37,4 +38,12 @@ export function getMultilingualContent<T>(
     return content[locale] ?? content[defaultLocale];
   }
   return content;
+}
+
+export async function getMessages(locale: string): Promise<Messages> {
+  try {
+    return (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
 }

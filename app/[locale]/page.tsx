@@ -1,6 +1,5 @@
-import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { Locale, Messages } from "@/util/i18n";
+import { Locale, getMessages } from "@/util/i18n";
 
 import About from "@/components/About";
 import Banner from "@/components/Banner";
@@ -43,12 +42,4 @@ export default async function Home({
       <Footer />
     </>
   );
-}
-
-async function getMessages(locale: string): Promise<Messages> {
-  try {
-    return (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
 }

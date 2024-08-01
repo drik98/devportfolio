@@ -1,12 +1,17 @@
 import fs from 'fs';
-import messages from '@/messages/de.json' 
 import about from "@/content/about.json"
 import experience from "@/content/experience.json" 
 import education from "@/content/education.json"
 import { formatDateRangeCV } from '@/util/date-time';
-import { getMultilingualContent, supportedLocales } from '@/util/i18n';
+import { Locale, getMessages, getMultilingualContent, supportedLocales } from '@/util/i18n';
 
 for(const locale of supportedLocales) {
+  generateTemplate(locale);
+}
+
+async function generateTemplate(locale: Locale) {
+  const messages = await getMessages(locale);
+
   const birthday = new Intl.DateTimeFormat(locale, {
     dateStyle: "long"
   }).format(new Date(about.birthday));

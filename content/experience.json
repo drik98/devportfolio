@@ -59,7 +59,10 @@
     }
   },
   {
-    "company": "Werkzeugmaschinenlabor WZL der RWTH Aachen",
+    "company": {
+      "de": "Werkzeugmaschinenlabor WZL der RWTH Aachen",
+      "en": "Laboratory for Machine Tools and Production Engineering (WZL) of RWTH Aachen University"
+    },
     "url": {
       "de": "https://www.wzl.rwth-aachen.de/",
       "en": "https://www.wzl.rwth-aachen.de/cms/~sijq/wzl/?lidx=1"
