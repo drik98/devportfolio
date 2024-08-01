@@ -27,7 +27,7 @@ export default function About({
       "{startDate}",
       formatDate(new Date(currentJob.startDate), locale, messages)
     )
-    .replace("{jobTitle}", String(currentJob.title))
+    .replace("{jobTitle}",getMultilingualContent(currentJob.title, locale))
     .replace("{company}", getMultilingualContent(currentJob.company, locale));
 
   return (
