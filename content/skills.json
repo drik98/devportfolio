@@ -7,13 +7,14 @@
   {
     "category": "programming-languages",
     "name": "CSS",
-    "level": 5.5
+    "level": 5.5,
+    "groupWith": "HTML"
   },
   {
     "category": "programming-languages",
     "name": "SCSS",
     "level": 5.5,
-    "groupWith": "CSS"
+    "groupWith": "HTML"
   },
   {
     "category": "infrastructure",
@@ -64,8 +65,9 @@
   },
   {
     "category": "quality-assurance",
-    "name": "vitest",
-    "level": 5.5
+    "name": "Jasmine",
+    "level": 5.5,
+    "groupWith": "vitest"
   },
   {
     "category": "quality-assurance",
