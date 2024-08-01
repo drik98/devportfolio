@@ -37,7 +37,7 @@ export default async function Home({
       <Experience messages={messages} locale={params.locale} />
       <Education messages={messages} locale={params.locale} />
       <Projects messages={messages} locale={params.locale} />
-      <Skills messages={messages} />
+      <Skills messages={messages} locale={params.locale} />
       <Contact messages={messages} />
       <Footer />
     </>

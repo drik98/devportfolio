@@ -2,8 +2,12 @@ import fs from 'fs';
 import about from "@/content/about.json"
 import experience from "@/content/experience.json" 
 import education from "@/content/education.json"
+import skills from "@/content/skills.json";
+import categories from "@/content/skill-categories.json";
 import { formatDateRangeCV } from '@/util/date-time';
 import { Locale, getMessages, getMultilingualContent, supportedLocales } from '@/util/i18n';
+
+const displayedSkills = skills.filter(skill => !skill.hideOnCv);
 
 for(const locale of supportedLocales) {
   generateTemplate(locale);
@@ -15,6 +19,31 @@ async function generateTemplate(locale: Locale) {
   const birthday = new Intl.DateTimeFormat(locale, {
     dateStyle: "long"
   }).format(new Date(about.birthday));
+
+  const skillCategories = Object.entries(categories)
+    .map(([id, category]) => {
+      return {
+        ...category,
+        id,
+        label: getMultilingualContent(category.label, locale),
+        skills: displayedSkills.filter(skill => skill.category === id && !skill.groupWith).map(skill => {
+          const name = getMultilingualContent(skill.name,locale);
+          const groupedSkills = displayedSkills.filter(otherSkill => otherSkill.groupWith === name);
+          return {
+            ...skill,
+            label: [name,...groupedSkills.map(groupedSkill => getMultilingualContent(groupedSkill.name,locale))].join("\\char`\\/")
+          }
+        })
+      }
+    })
+
+    const [firstCategory, secondCategory, ...otherCategories] = skillCategories;
+
+    const makeCustomSkills = (skillCategory: typeof firstCategory) => {
+      const sortedSkills = skillCategory.skills.sort((a,b) => a.level - b.level)
+      return String.raw`\customskills{${skillCategory.label}}{${sortedSkills.map(skill => `${skill.label}/${skill.level}`)}}{}`;
+    }
+
   
   const localizedTemplate = String.raw`
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,9 +121,9 @@ async function generateTemplate(locale: Locale) {
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \customskills{Sprachen}{{Französisch (Konversationssicher)/3.5},{Englisch (Verhandlungssicher)/5},{Deutsch (Muttersprache)/6}}{}
+    ${makeCustomSkills(firstCategory)}
     
-    \customskills{Programmiersprachen}{{Shell/4},{Python/4},{Java\char${"`"}\/Kotlin/5.5},{CSS\char${"`"}\/SCSS/5.5},{JavaScript\char${"`"}\/Typescript/6}}{Skala: 0 (Grundkenntnisse) - 6 (Experte)}
+    ${makeCustomSkills(secondCategory)}
     
     \makefootersidenodevfill
     
@@ -141,9 +170,9 @@ ${getMultilingualContent(exp.keyPoints, locale).map(item =>
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \customskills{Frameworks \& Technologien}{{React/4},{Docker\char${"`"}\/Kubernetes/4},{Nuxt/4.5},{CI\char${"`"}\/CD/5},{Quarkus\char${"`"}\/Spring/5.5},{Vue.js/6}}{}
-
-    \customskills{Agile Entwicklung}{{Product Owner/2},{Kanban/3},{Scrum Master/4},{Scrum/5}}{Skala: 0 (Grundkenntnisse) - 6 (Experte)}
+${otherCategories.map(category => 
+`    ${makeCustomSkills(category)}`
+).join("\n")}
 
     \makefooterprofile{}
     
@@ -183,3 +212,5 @@ try {
   console.error('Error writing file: ' + filePath, err);
 }
 }
+
+
