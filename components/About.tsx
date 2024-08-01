@@ -4,7 +4,7 @@ import about from "@/content/about.json";
 import profilePic from "@/cv/profile_picture.jpg";
 import styles from "./About.module.scss";
 import { formatDate } from "@/util/date-time";
-import { Locale, Messages } from "@/util/i18n";
+import { Locale, Messages, getMultilingualContent } from "@/util/i18n";
 
 const birthDate = new Date(about.birthday);
 const currentDate = new Date();
@@ -28,7 +28,7 @@ export default function About({
       formatDate(new Date(currentJob.startDate), locale, messages)
     )
     .replace("{jobTitle}", String(currentJob.title))
-    .replace("{company}", currentJob.company);
+    .replace("{company}", getMultilingualContent(currentJob.company, locale));
 
   return (
     <div id="about" className={styles.about}>
