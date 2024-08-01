@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Locale, getMessages } from "@/util/i18n";
+import about from "@/content/about.json";
 
 import About from "@/components/About";
 import Banner from "@/components/Banner";
@@ -17,7 +18,10 @@ export async function generateMetadata({
   params: { locale: Locale };
 }): Promise<Metadata> {
   const messages = await getMessages(params.locale);
-  return messages.metadata;
+  return {
+    ...messages.metadata,
+    title: messages.metadata.title.replace("{name}", about.name)
+  }
 }
 
 export default async function Home({
