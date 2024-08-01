@@ -1,4 +1,5 @@
 import { Locale, Messages } from "@/util/i18n";
+import about from "@/content/about.json";
 import styles from "./Banner.module.scss";
 
 export default function Banner({
@@ -11,7 +12,7 @@ export default function Banner({
   return (
     <div className={styles.banner}>
       <div className={styles.bannerContent}>
-        <h1>Hendrik Schmitz</h1>
+        <h1>{about.name}</h1>
         <h2>{messages.banner.jobTitle}</h2>
         <a
           href={`/cv_hendrik_schmitz_${locale}.pdf`}

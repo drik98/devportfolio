@@ -1,11 +1,12 @@
 import Image from "next-export-optimize-images/image";
 import experience from "@/content/experience.json";
+import about from "@/content/about.json";
 import profilePic from "@/cv/profile_picture.jpg";
 import styles from "./About.module.scss";
 import { formatDate } from "@/util/date-time";
-import { Locale, Messages } from "@/util/i18n";
+import { Locale, Messages, getMultilingualContent } from "@/util/i18n";
 
-const birthDate = new Date("1998-06-30");
+const birthDate = new Date(about.birthday);
 const currentDate = new Date();
 const difference = currentDate.getTime() - birthDate.getTime();
 const ageDate = new Date(difference);
@@ -26,8 +27,8 @@ export default function About({
       "{startDate}",
       formatDate(new Date(currentJob.startDate), locale, messages)
     )
-    .replace("{jobTitle}", String(currentJob.title))
-    .replace("{company}", currentJob.company);
+    .replace("{jobTitle}", getMultilingualContent(currentJob.title, locale))
+    .replace("{company}", getMultilingualContent(currentJob.company, locale));
 
   return (
     <div id="about" className={styles.about}>
@@ -38,7 +39,7 @@ export default function About({
             <Image
               className={styles.profilePicture}
               src={profilePic}
-              alt="Hendrik Schmitz"
+              alt={about.name}
             />
           </div>
           <div className="col-md-8">

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && next-export-optimize-images",
     "start": "serve out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-latex": "ts-node --project ./tsconfig.node.json -r tsconfig-paths/register ./cv/generate-tex-files.ts"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -27,6 +28,8 @@
     "eslint-config-next": "14.2.5",
     "next-export-optimize-images": "^4.5.0",
     "serve": "^14.2.3",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.4"
   }
 }

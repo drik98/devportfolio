@@ -6,21 +6,23 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Compile LaTeX document (de)
+      - name: Install dependencies
+        run: npm install
+      - name: Generate localized LaTeX templates
+        run: npm run generate-latex
+      - name: Upload generated LaTeX templates
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-templates
+          path: cv/cv_hendrik_schmitz_*.tex
+      - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv/cv_hendrik_schmitz_de.tex
+          root_file: cv/cv_hendrik_schmitz_*.tex
           continue_on_error: "true"
         env:
           TEXINPUTS: ".:./cv//:"
-      - name: Compile LaTeX document (en)
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: cv/cv_hendrik_schmitz_en.tex
-          continue_on_error: "true"
-        env:
-          TEXINPUTS: ".:./cv//:"
-      - name: Upload PDF files
+      - name: Upload generated PDF files
         uses: actions/upload-artifact@v4
         with:
           name: cvs
@@ -29,8 +31,6 @@ jobs:
         run: |
           mkdir -p public
           cp -R *.pdf public/
-      - name: Install dependencies
-        run: npm install
       - name: Build Next.js app
         run: npm run build
       - name: Deploy to Netlify

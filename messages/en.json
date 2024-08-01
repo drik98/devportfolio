@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "title": "Hendrik Schmitz | My Portfolio",
+        "title": "{name} | My Portfolio",
         "description": "Experienced Fullstack Software Engineer with a strong focus on Frontend Development. Explore my portfolio showcasing innovative web solutions and cutting-edge technology expertise."
     },
     "common": {
@@ -41,5 +41,10 @@
         "email": "E-Mail",
         "message": "Message",
         "submit": "Send"
+    },
+    "cv": {
+        "pageNumber": "Page",
+        "pageOf": "of",
+        "since": "since"
     }
 }

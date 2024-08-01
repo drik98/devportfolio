@@ -1,3 +1,4 @@
+import about from "@/content/about.json";
 import styles from "./Footer.module.scss";
 
 const currentYear = new Date().getFullYear();
@@ -8,7 +9,9 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className={`col-sm-5 ${styles.copyright}`}>
-            <p>Copyright &copy; {currentYear} Hendrik Schmitz</p>
+            <p>
+              Copyright &copy; {currentYear} {about.name}
+            </p>
           </div>
           <div className={`col-sm-2 ${styles.top}`}>
             <a id="to-top" href="#">
@@ -17,33 +20,39 @@ export default function Footer() {
           </div>
           <div className={`col-sm-5 ${styles.social}`}>
             <ul>
-              <li>
-                <a
-                  href="https://github.com/drik98"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa fa-github" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/hendriksmtz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.xing.com/profile/Hendrik_Schmitz29"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa fa-xing" aria-hidden="true"></i>
-                </a>
-              </li>
+              {about.github ? (
+                <li>
+                  <a
+                    href={`https://github.com/${about.github}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa fa-github" aria-hidden="true"></i>
+                  </a>
+                </li>
+              ) : null}
+              {about.linkedIn ? (
+                <li>
+                  <a
+                    href={`https://www.linkedin.com/in/${about.linkedIn}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </li>
+              ) : null}
+              {about.xing ? (
+                <li>
+                  <a
+                    href={`https://www.xing.com/profile/${about.xing}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa fa-xing" aria-hidden="true"></i>
+                  </a>
+                </li>
+              ) : null}
             </ul>
           </div>
         </div>

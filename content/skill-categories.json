@@ -1,0 +1,51 @@
+{
+    "languages": {
+        "label": {
+            "de": "Sprachen",
+            "en": "Languages"
+        },
+        "displayOnWebpage": false
+    },
+    "programming-languages": {
+        "label": {
+            "de": "Programmiersprachen",
+            "en": "Programming languages"
+        },
+        "displayOnWebpage": true
+    },
+    "frameworks-technologies": {
+        "label": {
+            "de": "Frameworks & Technologien",
+            "en": "Frameworks & Technologies"
+        },
+        "displayOnWebpage": true
+    },
+    "build-tools": {
+        "label": {
+            "de": "Build tools",
+            "en": "Build tools"
+        },
+        "displayOnWebpage": true
+    },
+    "infrastructure": {
+        "label": {
+            "de": "DevOps",
+            "en": "DevOps"
+        },
+        "displayOnWebpage": true
+    },
+    "quality-assurance": {
+        "label": {
+            "de": "Qualitätssicherung",
+            "en": "Quality Assurance"
+        },
+        "displayOnWebpage": true
+    },
+    "programming-concepts": {
+        "label": {
+            "de": "Programmierkonzepte",
+            "en": "Programming concepts"
+        },
+        "displayOnWebpage": true
+    }
+}

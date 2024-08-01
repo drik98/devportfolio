@@ -82,18 +82,20 @@ function ProjectItem({
         <h3>{translatedTitle}</h3>
         <p>{getMultilingualContent(description, locale)}</p>
         <Technologies technologies={technologies} messages={messages} />
-        {projectUrl ? (
-          <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-external-link"></i>
-            {messages.projects.viewProject}
-          </a>
-        ) : null}
-        {sourceCodeUrl ? (
-          <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-code"></i>
-            {messages.projects.viewCode}
-          </a>
-        ) : null}
+        <span>
+          {projectUrl ? (
+            <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-external-link"></i>
+              {messages.projects.viewProject}
+            </a>
+          ) : null}
+          {sourceCodeUrl ? (
+            <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-code"></i>
+              {messages.projects.viewCode}
+            </a>
+          ) : null}
+        </span>
       </div>
     </div>
   );
