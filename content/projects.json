@@ -1,6 +1,35 @@
 [
   {
     "title": {
+      "de": "Mein Portfolio",
+      "en": "My Portfolio"
+    },
+    "description": {
+      "de": "Ursprünglich habe ich mein Portfolio erstellt, als ich das erste Mal nach meinem dualen Studium auf Jobsuche war. Am Anfang war es noch ein einfaches HTML Template, das ich ab und zu angepasst habe. Mit der Zeit wurde mir der Pflegeaufwand jedoch zu groß, sodass ich die Website auf ein next.js Projekt migriert habe, welches sowohl die statische Website als auch meinen Lebenslauf mehrsprachig aus einer einzigen Datenquelle generiert.",
+      "en": "I originally created my portfolio when I was looking for a job for the first time after my dual study programme. In the beginning, it was a simple HTML template that I customised from time to time. Over time, however, the maintenance effort became too great for me, so I migrated the website to a next.js project, which generates both the static website and my CV in multiple languages from a single data source."
+    },
+    "image": "/images/projects/devportfolio.jpg",
+    "projectUrl": "https://siewedding.netlify.app/",
+    "technologies": [
+      {
+        "name": "React",
+        "url": "https://reactjs.org/",
+        "image": "/images/technologies/react.png"
+      },
+      {
+        "name": "next.js",
+        "url": "https://nextjs.org/",
+        "image": "/images/technologies/nextjs.svg"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
+  },
+  {
+    "title": {
       "de": "Hochzeits Website",
       "en": "Wedding page"
     },
