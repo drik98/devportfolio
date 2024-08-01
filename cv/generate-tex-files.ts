@@ -94,7 +94,7 @@ async function generateTemplate(locale: Locale) {
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \customskills{Sprachen}{{Französisch (Konversationssicher)/3.5},{Englisch (Verhandlungssicher)/5},{Deutsch (Muttersprache)/6}}{}
     
-    \customskills{Programmiersprachen}{{Shell/4},{Python/4},{Java\/Kotlin/5.5},{CSS\/SCSS/5.5},{JavaScript\/Typescript/6}}{Skala: 0 (Grundkenntnisse) - 6 (Experte)}
+    \customskills{Programmiersprachen}{{Shell/4},{Python/4},{Java\char${"`"}\/Kotlin/5.5},{CSS\char${"`"}\/SCSS/5.5},{JavaScript\char${"`"}\/Typescript/6}}{Skala: 0 (Grundkenntnisse) - 6 (Experte)}
     
     \makefootersidenodevfill
     
@@ -141,7 +141,7 @@ ${getMultilingualContent(exp.keyPoints, locale).map(item =>
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \customskills{Frameworks \& Technologien}{{React/4},{Docker\/Kubernetes/4},{Nuxt/4.5},{CI\/CD/5},{Quarkus\/Spring/5.5},{Vue.js/6}}{}
+    \customskills{Frameworks \& Technologien}{{React/4},{Docker\char${"`"}\/Kubernetes/4},{Nuxt/4.5},{CI\char${"`"}\/CD/5},{Quarkus\char${"`"}\/Spring/5.5},{Vue.js/6}}{}
 
     \customskills{Agile Entwicklung}{{Product Owner/2},{Kanban/3},{Scrum Master/4},{Scrum/5}}{Skala: 0 (Grundkenntnisse) - 6 (Experte)}
 
