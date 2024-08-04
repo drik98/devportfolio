@@ -196,5 +196,37 @@
         "image": "/images/technologies/kotlin.svg"
       }
     ]
+  },
+  {
+    "title": "PREvant Payload Producer ",
+    "description": {
+      "de": "P³ ist ein hochspezialisiertes Tool, mit dem sich JSON-Payloads für die OSS PREvant einfach bearbeiten lassen. PREvant ist ein webbasiertes Softwaretool, das als Test- und Überprüfungsplattform fungiert und die Bereitstellung und Verwaltung von Microservices für Entwicklungsteams vereinfacht. Bei der Erstellung eines Deployments ist es möglich, einen JSON-Payload bereitzustellen, der eine Liste aller Microservices und ihrer jeweiligen Konfigurationen enthält. Dies führte zu einem Durcheinander von gemeinsam genutzten JSON-Dateien, die bei der manuellen Bearbeitung oft versehentlich beschädigt wurden. Dieses Tool ermöglicht es, entweder einen bestehende Payload zu importieren oder einen völlig neuen zu erstellen, ihn einfach zu bearbeiten und zu exportieren.",
+      "en": "P³ is a highly specialized tool which can be used to easily edit JSON payloads for the OSS PREvant. PREvant is a web-based software tool that acts as a testing and review platform, simplifying the deployment and management of microservices for development teams. When creating a deployment it is possible to provide a JSON payload composing a list of all microservices and their respective configurations. This led to a mess of shared JSON files which were often accidentally broken when shared manually. This tool allows to either import an existing payload or create a completely new one, edit it easily and export it."
+    },
+    "image": "/images/projects/prevant-payload-producer.png",
+    "sourceCodeUrl": "https://github.com/drik98/PREvant-Payload-Producer",
+    "projectUrl": "https://prevant-payload-producer.netlify.app",
+    "technologies": [
+      {
+        "name": "vue.js",
+        "url": "https://vuejs.org/",
+        "image": "/images/technologies/vue.png"
+      },
+      {
+        "name": "NuxtJS",
+        "url": "https://nuxt.com/",
+        "image": "/images/technologies/nuxt.svg"
+      },
+      {
+        "name": "PrimeVue",
+        "url": "https://primevue.org/",
+        "image": "/images/technologies/primevue.png"
+      },
+      {
+        "name": "netlify",
+        "url": "https://www.netlify.com/",
+        "image": "/images/technologies/netlify.png"
+      }
+    ]
   }
 ]
