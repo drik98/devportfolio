@@ -14,11 +14,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: latex-templates
-          path: cv/cv_hendrik_schmitz_*.tex
+          path: cv/cv_hendrik_sieweck_*.tex
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv/cv_hendrik_schmitz_*.tex
+          root_file: cv/cv_hendrik_sieweck_*.tex
           continue_on_error: "true"
         env:
           TEXINPUTS: ".:./cv//:"
@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cvs
-          path: cv_hendrik_schmitz_*.pdf
+          path: cv_hendrik_sieweck_*.pdf
       - name: Copy generated pdf files to public directory
         run: |
           mkdir -p public
