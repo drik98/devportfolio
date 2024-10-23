@@ -16,7 +16,7 @@ export default function Banner({
         <h2>{messages.banner.jobTitle}</h2>
         <a
           href={`/cv_hendrik_sieweck_${locale}.pdf`}
-          download="cv-hendrik-sieweck.pdf"
+          download={`cv-hendrik-sieweck-${locale}.pdf`}
         >
           {messages.banner.downloadCv}
         </a>
