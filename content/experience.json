@@ -1,11 +1,35 @@
 [
   {
+    "company": "WPS Management GmbH",
+    "url": "https://wps-management.de/",
+    "startDate": "2024-12-01",
+    "title": "Senior Fullstack Engineer",
+    "image": "/images/experience/wpsm.png",
+    "keyPoints": {
+      "de": [
+        "Schlüsselrolle bei der Weiterentwicklung des E-Procurements mit wescale zur Ermöglichung einer nahtlosen Zusammenarbeit mit Lieferanten",
+        "Aktives Mitglied des unternehmensweiten Tech-Boards, treibende Kraft hinter der technischen Strategie und der Modernisierung von CI/CD",
+        "Entwicklung und Verbesserung von User Interfaces und Backend-Anwendungen",
+        "Zusammenarbeit mit Product Ownern, UX und funktionsübergreifenden Teams zur Umsetzung von Features und Lösung von Herausforderungen",
+        "Schreiben von sauberem, skalierbarem und wartbarem Code sowie Entwicklung skalierbarer Lösungen"
+      ],
+      "en": [
+        "Key role in enhancing e-procurement with Wescale, enabling seamless supplier collaboration",
+        "Active member of the company-wide tech board, driving technical strategy and CI/CD modernization",
+        "Developing and improving user interfaces and backend applications",
+        "Collaborating with Product Owners, UX, and cross-functional teams to deliver features and resolve challenges",
+        "Writing clean, scalable, and maintainable code while designing scalable solutions"
+      ]
+    }
+  },
+  {
     "company": "itemis AG",
     "url": {
       "de": "https://www.itemis.com/",
       "en": "https://www.itemis.com/en/"
     },
     "startDate": "2023-12-01",
+    "endDate": "2024-11-30",
     "title": "Senior Software Engineer",
     "image": "/images/experience/itemis.svg",
     "keyPoints": {
