@@ -63,22 +63,20 @@
     "image": "/images/experience/aixigo.svg",
     "keyPoints": {
       "de": [
-        "Leitung der Entwicklung von Micro Frontends, hauptsächlich unter Verwendung von Vue.js",
+        "Mitentwicklung von Micro Frontends unter Verwendung von Vue.js",
         "Federführung bei der Entwicklung und Konzeption von Fintech-Microservices mit Vue.js und Java EE",
         "Zentrale Rolle bei der Modernisierung des Tech-Stacks durch die Einführung von TypeScript und Storybook",
         "Einsatz für hochwertige Softwareentwicklung und Betonung von Clean Code",
         "Aktive Mitwirkung an der Verbesserung des CI/CD-Prozesses",
-        "Verantwortung für die Einarbeitung neuer Teammitglieder, Bereitstellung von Anleitung und Coaching für eine reibungslose Integration",
-        "Teilnahme an einem Mentorenprogramm, um sich als Führungskraft weiterzuentwickeln"
+        "Verantwortung für die Einarbeitung neuer Teammitglieder, Bereitstellung von Anleitung und Coaching für eine reibungslose Integration"
       ],
       "en": [
-        "Led the development of Micro Frontends primarily using Vue.js.",
+        "Co-developed Micro Frontends using Vue.js, owning key parts of the frontend architecture.",
         "Spearheaded the development and conceptualization of Fintech Microservices using Vue.js and Java EE.",
         "Played a central role in modernizing the tech stack by introducing TypeScript and Storybook.",
         "Advocated for high-quality software development, emphasizing code excellence.",
         "Actively contributed to enhancing the CI/CD process.",
-        "Took charge of onboarding new team members, providing guidance and coaching for smooth integration.",
-        "Participation in mentoring program to develop as a leader."
+        "Took charge of onboarding new team members, providing guidance and coaching for smooth integration."
       ]
     }
   },
