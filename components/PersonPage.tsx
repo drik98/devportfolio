@@ -33,7 +33,7 @@ export default function PersonPage({
 
   return (
     <div style={themeVars}>
-      <Header messages={messages} locale={locale} />
+      <Header messages={messages} locale={locale} person={person} />
       <Banner messages={messages} locale={locale} person={person} />
       <About
         messages={messages}
