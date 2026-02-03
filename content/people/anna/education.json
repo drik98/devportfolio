@@ -1,0 +1,31 @@
+[
+  {
+    "educator": "RWTH Aachen University",
+    "url": "https://www.rwth-aachen.de/",
+    "startDate": "2022-10-01",
+    "title": {
+      "de": "Master of Science, Angewandte Geographie",
+      "en": "Master of Science, Applied Geography"
+    },
+    "image": "/images/education/rwth.png",
+    "keyPoints": {
+      "de": ["Aktuell im Studium"],
+      "en": ["Currently studying"]
+    }
+  },
+  {
+    "educator": "RWTH Aachen University",
+    "url": "https://www.rwth-aachen.de/",
+    "startDate": "2017-10-01",
+    "endDate": "2022-09-30",
+    "title": {
+      "de": "Bachelor of Science, Angewandte Geographie",
+      "en": "Bachelor of Science, Applied Geography"
+    },
+    "image": "/images/education/rwth.png",
+    "keyPoints": {
+      "de": ["Aktivitäten und Verbände: Senatorin und Fachschaft"],
+      "en": ["Activities and associations: senator and student council"]
+    }
+  }
+]

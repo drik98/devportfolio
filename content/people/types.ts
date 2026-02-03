@@ -100,6 +100,6 @@ export interface PersonContent {
   supportedLocales?: Locale[];
 }
 
-export const personSlugs = ["hendrik"] as const;
+export const personSlugs = ["hendrik", "anna"] as const;
 export type PersonSlug = (typeof personSlugs)[number];
 export const defaultPersonSlug: PersonSlug = "hendrik";

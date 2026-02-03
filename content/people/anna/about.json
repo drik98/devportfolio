@@ -1,0 +1,37 @@
+{
+  "name": "Anna Sieweck",
+  "birthday": "1998-12-01",
+  "phoneNumber": "+49 176 3272050",
+  "address": "Aachen, Germany",
+  "website": "anna.sieweck.de",
+  "linkedIn": "anna-sieweck-b03120188",
+  "mail": "anna@sieweck.de",
+  "metadata": {
+    "title": {
+      "de": "{name} | Portfolio",
+      "en": "{name} | Portfolio"
+    },
+    "description": {
+      "de": "Portfolio von Anna Sieweck mit Fokus auf Geographie, GIS und Umweltplanung.",
+      "en": "Portfolio of Anna Sieweck focused on geography, GIS and environmental planning."
+    }
+  },
+  "about": {
+    "career": {
+      "de": [
+        "Ich arbeite im Bereich Geographie mit Schwerpunkt auf GIS, Planung und Dokumentation."
+      ],
+      "en": [
+        "I work in geography with a focus on GIS, planning and documentation."
+      ]
+    },
+    "myself": {
+      "de": "Ich heiße Anna Sieweck und lebe in Aachen. Seit {startDate} arbeite ich als {jobTitle} bei {company}.",
+      "en": "My name is Anna Sieweck and I live in Aachen. Since {startDate}, I have been working as {jobTitle} at {company}."
+    }
+  },
+  "jobTitle": {
+    "de": "Engineering Consultant",
+    "en": "Engineering Consultant"
+  }
+}

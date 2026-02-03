@@ -1,0 +1,71 @@
+[
+  {
+    "company": "ALTEN",
+    "url": "https://www.alten.com/",
+    "startDate": "2025-01-01",
+    "title": "Engineering Consultant",
+    "image": "/images/experience/alten.png",
+    "keyPoints": {
+      "de": [
+        "Validierung von Planungen, Dokumentationen und Angeboten mit Hilfe von TKI (NET-Engineering)"
+      ],
+      "en": [
+        "Validation of plans, documentation, and offers using TKI (NET engineering)"
+      ]
+    }
+  },
+  {
+    "company": "ALTEN",
+    "url": "https://www.alten.com/",
+    "startDate": "2023-04-01",
+    "endDate": "2024-12-31",
+    "title": "Junior Engineering Consultant / Schwerpunkt Dokumentation",
+    "image": "/images/experience/alten.png",
+    "keyPoints": {
+      "de": ["Megaplan Dokumentation", "QGIS Planung von NVTs"],
+      "en": ["Megaplan documentation", "QGIS planning of NVTs"]
+    }
+  },
+  {
+    "company": "Deutsche Bahn",
+    "url": "https://www.deutschebahn.com/",
+    "startDate": "2021-06-01",
+    "endDate": "2022-12-31",
+    "title": {
+      "de": "Werkstudentin",
+      "en": "Working student"
+    },
+    "image": "/images/experience/db.png",
+    "keyPoints": {
+      "de": [
+        "Mitwirkung bei der Erstellung von landschaftspflegerischen Begleitplänen (LBP)",
+        "Unterstützung bei der umweltfachlichen Bauüberwachung inkl. Baudokumentation und Berichterstellung",
+        "Digitalisierung von Ausgleichs-, Ersatz- und Vermeidungsmaßnahmen im Fachinformationssystem (FINK)",
+        "Digitalisierung von Biotopen und Artenfundpunkten in GIS für Bestands- und Konfliktpläne",
+        "Durchführung faunistischer Kartierungen (Avifauna, Reptilien, Fledermäuse, Amphibien)"
+      ],
+      "en": [
+        "Contributed to landscape conservation plans (LBP)",
+        "Supported environmental construction supervision incl. documentation and reporting",
+        "Digitized compensation/mitigation measures in the FINK information system",
+        "Digitized biotopes and species records in GIS for inventory and conflict plans",
+        "Conducted faunistic surveys (birds, reptiles, bats, amphibians)"
+      ]
+    }
+  },
+  {
+    "company": "Ramboll Studio Dreiseitl",
+    "url": "https://ramboll.com/",
+    "startDate": "2020-10-01",
+    "endDate": "2020-12-31",
+    "title": {
+      "de": "Praktikantin",
+      "en": "Intern"
+    },
+    "image": "/images/experience/ramboll.png",
+    "keyPoints": {
+      "de": ["Einsatz von AutoCAD in Projekten"],
+      "en": ["Used AutoCAD in projects"]
+    }
+  }
+]

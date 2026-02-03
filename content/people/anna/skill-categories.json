@@ -1,0 +1,44 @@
+{
+  "languages": {
+    "label": {
+      "de": "Sprachen",
+      "en": "Languages"
+    },
+    "displayOnWebpage": false
+  },
+  "soft-skills": {
+    "label": {
+      "de": "Soft Skills",
+      "en": "Soft Skills"
+    },
+    "displayOnWebpage": true
+  },
+  "geospatial-tools": {
+    "label": {
+      "de": "Geodaten & GIS",
+      "en": "Geospatial & GIS"
+    },
+    "displayOnWebpage": true
+  },
+  "office-tools": {
+    "label": {
+      "de": "Office",
+      "en": "Office"
+    },
+    "displayOnWebpage": true
+  },
+  "design-tools": {
+    "label": {
+      "de": "Design & CAD",
+      "en": "Design & CAD"
+    },
+    "displayOnWebpage": true
+  },
+  "analysis-tools": {
+    "label": {
+      "de": "Analyse",
+      "en": "Analysis"
+    },
+    "displayOnWebpage": true
+  }
+}

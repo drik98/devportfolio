@@ -9,6 +9,8 @@ jobs:
         person:
           - slug: hendrik
             netlify_site_id: 11cf5515-4f97-4965-a552-6532b609d9f3
+          - slug: anna
+            netlify_site_id: 628f4d9f-ca27-4bf0-9c40-8ffbc4f4f66f
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4

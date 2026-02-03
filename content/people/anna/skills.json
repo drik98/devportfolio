@@ -1,0 +1,126 @@
+[
+  {
+    "category": "soft-skills",
+    "name": "Kommunikation",
+    "level": 6
+  },
+  {
+    "category": "soft-skills",
+    "name": "Organisationsfähigkeiten",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "TKI",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Megaplan",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Google Earth Engine",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "QGIS",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Geoinformationssysteme (GIS)",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Quantum GIS",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "GIS",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "ArcGIS Pro",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Global Mapper",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "Google Earth",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "WABILA",
+    "level": 6
+  },
+  {
+    "category": "geospatial-tools",
+    "name": "FINK",
+    "level": 6
+  },
+  {
+    "category": "design-tools",
+    "name": "CorelDRAW",
+    "level": 6
+  },
+  {
+    "category": "design-tools",
+    "name": "AutoCAD",
+    "level": 6
+  },
+  {
+    "category": "analysis-tools",
+    "name": "SPSS",
+    "level": 6
+  },
+  {
+    "category": "office-tools",
+    "name": "Microsoft Word",
+    "level": 6
+  },
+  {
+    "category": "office-tools",
+    "name": "Microsoft PowerPoint",
+    "level": 6
+  },
+  {
+    "category": "office-tools",
+    "name": "Microsoft Excel",
+    "level": 6
+  },
+  {
+    "category": "languages",
+    "name": {
+      "de": "Deutsch (Muttersprache)",
+      "en": "German (Native)"
+    },
+    "level": 6
+  },
+  {
+    "category": "languages",
+    "name": {
+      "de": "Englisch (Verhandlungssicher)",
+      "en": "English (Mastery)"
+    },
+    "level": 5
+  },
+  {
+    "category": "languages",
+    "name": {
+      "de": "Französisch (Konversationssicher)",
+      "en": "French (Intermediate)"
+    },
+    "level": 3.5
+  }
+]
