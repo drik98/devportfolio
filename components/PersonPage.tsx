@@ -42,23 +42,40 @@ export default function PersonPage({
         experience={person.experience}
         profileImage={person.profileImage}
       />
-      <Experience
-        messages={messages}
-        locale={locale}
-        experience={person.experience}
-      />
-      <Education
-        messages={messages}
-        locale={locale}
-        education={person.education}
-      />
-      <Projects messages={messages} locale={locale} projects={person.projects} />
-      <Skills
-        messages={messages}
-        locale={locale}
-        skills={person.skills}
-        skillCategories={person.skillCategories}
-      />
+
+      {person.experience?.length ? (
+        <Experience
+          messages={messages}
+          locale={locale}
+          experience={person.experience}
+        />
+      ) : null}
+
+      {person.education?.length ? (
+        <Education
+          messages={messages}
+          locale={locale}
+          education={person.education}
+        />
+      ) : null}
+
+      {person.projects?.length ? (
+        <Projects
+          messages={messages}
+          locale={locale}
+          projects={person.projects}
+        />
+      ) : null}
+
+      {person.skills?.length && person.skillCategories ? (
+        <Skills
+          messages={messages}
+          locale={locale}
+          skills={person.skills}
+          skillCategories={person.skillCategories}
+        />
+      ) : null}
+
       <Contact messages={messages} formAction={person.contact.formAction} />
       <Footer about={person.about} />
     </div>

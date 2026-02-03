@@ -13,7 +13,7 @@ export default function About({
   messages: Messages;
   locale: Locale;
   about: AboutContent;
-  experience: ReadonlyArray<ExperienceContent>;
+  experience?: ReadonlyArray<ExperienceContent>;
   profileImage: string;
 }) {
   const birthDate = new Date(about.birthday);
@@ -22,16 +22,24 @@ export default function About({
   const ageDate = new Date(difference);
   const currentAge = Math.abs(ageDate.getUTCFullYear() - 1970);
 
-  const [currentJob] = experience;
+  const [currentJob] = experience ?? [];
 
-  const aboutMyself = messages.about.myself
+  const aboutMyself = getMultilingualContent(about.about.myself, locale)
     .replace("{currentAge}", String(currentAge))
     .replace(
       "{startDate}",
-      formatDate(new Date(currentJob.startDate), locale, messages)
+      currentJob?.startDate
+        ? formatDate(new Date(currentJob.startDate), locale, messages)
+        : "",
     )
-    .replace("{jobTitle}", getMultilingualContent(currentJob.title, locale))
-    .replace("{company}", getMultilingualContent(currentJob.company, locale));
+    .replace(
+      "{jobTitle}",
+      currentJob ? getMultilingualContent(currentJob.title, locale) : "",
+    )
+    .replace(
+      "{company}",
+      currentJob ? getMultilingualContent(currentJob.company, locale) : "",
+    );
 
   return (
     <div id="about" className={styles.about}>
@@ -48,13 +56,13 @@ export default function About({
           <div className="col-md-8">
             <p dangerouslySetInnerHTML={{ __html: aboutMyself }} />
             <br />
-            {messages.about.carrer.map(
+            {getMultilingualContent(about.about.career, locale).map(
               (paragraph: string, index: number, array: string[]) => (
                 <>
                   <p key={index}>{paragraph}</p>
                   {index !== array.length - 1 ? <br /> : null}
                 </>
-              )
+              ),
             )}
           </div>
         </div>

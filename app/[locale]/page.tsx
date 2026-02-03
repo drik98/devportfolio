@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Locale, getMessages } from "@/util/i18n";
+import { Locale, getMessages, getMultilingualContent } from "@/util/i18n";
 import { getActivePerson } from "@/content/people/load";
 import PersonPage from "@/components/PersonPage";
 
@@ -11,8 +11,14 @@ export async function generateMetadata({
   const messages = await getMessages(params.locale);
   const person = await getActivePerson();
   return {
-    ...messages.metadata,
-    title: messages.metadata.title.replace("{name}", person?.about.name ?? ""),
+    title: getMultilingualContent(person.about.metadata.title, params.locale).replace(
+      "{name}",
+      person.about.name,
+    ),
+    description: getMultilingualContent(
+      person.about.metadata.description,
+      params.locale,
+    ),
   };
 }
 

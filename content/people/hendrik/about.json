@@ -7,5 +7,31 @@
     "linkedIn": "hendriksieweck",
     "xing": "Hendrik_Sieweck",
     "github": "drik98",
-    "mail": "hendrik@sieweck.de"
+    "mail": "hendrik@sieweck.de",
+    "metadata": {
+        "title": {
+            "de": "{name} | Mein Portfolio",
+            "en": "{name} | My Portfolio"
+        },
+        "description": {
+            "de": "Erfahrener Fullstack Software Engineer mit einem starken Fokus auf Frontend-Entwicklung. Entdecken Sie mein Portfolio mit innovativen Weblösungen und modernster Technologiekompetenz.",
+            "en": "Experienced Fullstack Software Engineer with a strong focus on Frontend Development. Explore my portfolio showcasing innovative web solutions and cutting-edge technology expertise."
+        }
+    },
+    "about": {
+        "career": {
+            "de": [
+                "In meiner neunjährigen beruflichen Laufbahn habe ich umfangreiche Erfahrungen in der Frontend-Entwicklung gesammelt, wobei ich mich auf Vue.js spezialisiert habe. Darüber hinaus verfüge ich über umfangreiche Kenntnisse im Back-End, da ich zuvor hauptsächlich mit Java und Kotlin gearbeitet habe. Diese Erfahrung ermöglicht es mir, sowohl bei der Frontend- als auch bei der Backend-Entwicklung effektiv zusammenzuarbeiten und nahtlose Integrationen zu gewährleisten.",
+                "Dank meines fundierten Fachwissens und meiner umfangreichen Erfahrung bin ich in der Lage, auf effektive Weise mit verschiedenen Akteuren in der Softwareentwicklung zusammenzuarbeiten, darunter Product Owner, Designer, Backend-Entwickler und DevOps-Experten."
+            ],
+            "en": [
+                "In my nine-year professional career, I have gained extensive experience in frontend development, specializing in Vue.js. In addition, I have extensive knowledge of the back-end, having primarily worked with Java and Kotlin before. This experience allows me to collaborate effectively on both front-end and back-end development and ensure seamless integrations.",
+                "Thanks to my in-depth expertise and extensive experience, I am able to work effectively with various stakeholders in software development, including product owners, designers, backend developers and DevOps experts."
+            ]
+        },
+        "myself": {
+            "de": "Mein Name ist Hendrik Sieweck (geb. Schmitz). Ich bin {currentAge} Jahre alt, komme aus Aachen und lebe dort auch derzeit. Ich habe den Dualen Studiengang <a href=\"https://www.fh-aachen.de/studium/studiengaenge/angewandte-mathematik-und-informatik-bsc-dual\"> Scientific Programming</a> absolviert und somit meinen Bachelor of Science an der  <a href=\"https://www.fh-aachen.de/\">FH Aachen</a> erworben und meine Ausbildung zum <a href=\"https://www.matse-ausbildung.de/\">Mathematisch technischen Softwareentwickler</a> beim <a href=\"https://www.wzl.rwth-aachen.de/\">Werkzeugmaschinenlabor WZL der RWTH Aachen</a> abgeschlossen. Seit {startDate} bin ich {jobTitle} bei {company} und arbeite hauptsächlich als Fullstack Entwickler.",
+            "en": "My name is Hendrik Sieweck, born Schmitz. I am {currentAge} years old and come from Aachen, where I currently live. I completed the dual study program <a href=\"https://www.fh-aachen.de/en/studies/degree-programmes/applied-mathematics-and-computer-science-dual-bsc\">Scientific Programming</a> and thus obtained my Bachelor of Science at the <a href=\"https://www.fh-aachen.de/en/\">FH Aachen</a> and completed my training as a <a href=\"https://www.matse-ausbildung.de/\"> mathematical technical software developer</a> at the <a href=\"https://www.wzl.rwth-aachen.de/cms/~sijq/wzl/?lidx=1\">Laboratory for Machine Tools and Production Engineering (WZL) of RWTH Aachen University</a>. Since {startDate}, I have been employed by {company} as a {jobTitle}, primarily engaged in full-stack development."
+        }
+    }
 }

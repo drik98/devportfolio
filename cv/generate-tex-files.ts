@@ -1,12 +1,18 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 import { getActivePerson } from "@/content/people/load";
 import type { PersonContent } from "@/content/people/types";
-import { formatDateRangeCV } from '@/util/date-time';
-import { Locale, getMessages, getMultilingualContent, supportedLocales } from '@/util/i18n';
+import { formatDateRangeCV } from "@/util/date-time";
+import {
+  Locale,
+  getMessages,
+  getMultilingualContent,
+  supportedLocales,
+} from "@/util/i18n";
 
 const SLASH_SEPARATOR_CHAR = "\\char`\\/";
-const sanitze = (value: string) => value.replaceAll("/", SLASH_SEPARATOR_CHAR).replaceAll("&", "\\&")
+const sanitze = (value: string) =>
+  value.replaceAll("/", SLASH_SEPARATOR_CHAR).replaceAll("&", "\\&");
 
 function getCvProfileImageTexPath(person: PersonContent) {
   return path.posix.join("people", person.slug, "profile_picture.jpg");
@@ -21,7 +27,7 @@ function ensureCvProfileImage(person: PersonContent) {
   const publicImagePath = path.join(
     process.cwd(),
     "public",
-    person.profileImage.replace(/^\//, "")
+    person.profileImage.replace(/^\//, ""),
   );
 
   fs.mkdirSync(path.dirname(cvImagePath), { recursive: true });
@@ -44,37 +50,120 @@ run().catch((error) => {
 async function generateTemplate(person: PersonContent, locale: Locale) {
   const messages = await getMessages(locale);
   const { about, experience, education, skills, skillCategories } = person;
-  const displayedSkills = skills.filter(skill => !skill.hideOnCv);
+  const displayedSkills = skills?.filter((skill) => !skill.hideOnCv) ?? [];
 
   const birthday = new Intl.DateTimeFormat(locale, {
-    dateStyle: "long"
+    dateStyle: "long",
   }).format(new Date(about.birthday));
 
-  const categorizedSkills = Object.entries(skillCategories)
-    .map(([id, category]) => {
-      return {
-        ...category,
-        id,
-        label: getMultilingualContent(category.label, locale),
-        skills: displayedSkills.filter(skill => skill.category === id && !skill.groupWith).map(skill => {
-          const name = getMultilingualContent(skill.name,locale);
-          const groupedSkills = displayedSkills.filter(otherSkill => otherSkill.groupWith === name);
-          return {
-            ...skill,
-            label: [name,...groupedSkills.map(groupedSkill => getMultilingualContent(groupedSkill.name,locale))].join("/")
-          }
-        })
-      }
-    })
+  const hasSkillData =
+    displayedSkills.length > 0 && skillCategories && Object.keys(skillCategories).length > 0;
 
-    const [firstCategory, secondCategory, ...otherCategories] = categorizedSkills;
+  const categorizedSkills = hasSkillData
+    ? Object.entries(skillCategories).map(([id, category]) => {
+        return {
+          ...category,
+          id,
+          label: getMultilingualContent(category.label, locale),
+          skills: displayedSkills
+            .filter((skill) => skill.category === id && !skill.groupWith)
+            .map((skill) => {
+              const name = getMultilingualContent(skill.name, locale);
+              const groupedSkills = displayedSkills.filter(
+                (otherSkill) => otherSkill.groupWith === name,
+              );
+              return {
+                ...skill,
+                label: [
+                  name,
+                  ...groupedSkills.map((groupedSkill) =>
+                    getMultilingualContent(groupedSkill.name, locale),
+                  ),
+                ].join("/"),
+              };
+            }),
+        };
+      })
+    : [];
 
-    const makeCustomSkills = (skillCategory: typeof firstCategory) => {
-      const sortedSkills = skillCategory.skills.sort((a,b) => a.level - b.level)
-      return String.raw`\customskills{${sanitze(skillCategory.label)}}{${sortedSkills.map(skill => `${sanitze(skill.label)}/${skill.level}`)}}{}`;
+  const [firstCategory, secondCategory, ...otherCategories] = categorizedSkills;
+
+  const makeCustomSkills = (skillCategory?: (typeof firstCategory)) => {
+    if (!skillCategory || skillCategory.skills.length === 0) {
+      return "";
     }
+    const sortedSkills = skillCategory.skills.sort((a, b) => a.level - b.level);
+    return String.raw`\customskills{${sanitze(skillCategory.label)}}{${sortedSkills.map((skill) => `${sanitze(skill.label)}/${skill.level}`)}}{}`;
+  };
 
-  
+  const sideSkillsPrimary = [firstCategory, secondCategory]
+    .map((category) => makeCustomSkills(category))
+    .filter(Boolean)
+    .join("\n\n");
+
+  const sideSkillsSecondary = otherCategories
+    .map((category) => `    ${makeCustomSkills(category)}`)
+    .filter((line) => line.trim().length > 0)
+    .join("\n");
+
+  const careerParagraphs = about.about?.career
+    ? getMultilingualContent(about.about.career, locale)
+    : [];
+
+  const experienceSection =
+    experience && experience.length
+      ? String.raw`
+    \section{${messages.header.sections.experience}}
+    
+    \begin{twenty}${experience
+      .map(
+        (exp) =>
+          `
+      \\twentyitem
+        {${formatDateRangeCV(new Date(exp.startDate), exp.endDate ? new Date(exp.endDate) : undefined, locale, messages)}}
+        {${getMultilingualContent(exp.title, locale)}}
+        {\\newline ${getMultilingualContent(exp.company, locale)}}
+        {
+        \\vspace{-3mm}
+        \\begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+${getMultilingualContent(exp.keyPoints, locale)
+  .map((item) => `          \\item ${item}`)
+  .join("\n")}
+        \\end{itemize}
+        }`,
+      )
+      .join("")}
+    \end{twenty}
+`
+      : "";
+
+  const educationSection =
+    education && education.length
+      ? String.raw`
+    \section{${messages.header.sections.education}}
+
+    \begin{twentymid}${education
+      .map(
+        (ed) =>
+          `
+      \\twentyitem
+        {${formatDateRangeCV(new Date(ed.startDate), ed.endDate ? new Date(ed.endDate) : undefined, locale, messages)}}
+        {${getMultilingualContent(ed.title, locale)}}
+        {\\newline ${getMultilingualContent(ed.educator, locale)}}
+        {
+        \\vspace{-3mm}
+        \\begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
+${getMultilingualContent(ed.keyPoints, locale)
+  .map((item) => `          \\item ${item}`)
+  .join("\n")}
+        \\end{itemize}
+        }`,
+      )
+      .join("")}
+    \end{twentymid}   
+`
+      : "";
+
   const localizedTemplate = String.raw`
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Twenty One Seconds Resume/CV
@@ -151,9 +240,7 @@ async function generateTemplate(person: PersonContent, locale: Locale) {
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    ${makeCustomSkills(firstCategory)}
-    
-    ${makeCustomSkills(secondCategory)}
+${sideSkillsPrimary}
     
     \makefootersidenodevfill
     
@@ -164,25 +251,9 @@ async function generateTemplate(person: PersonContent, locale: Locale) {
     
     \section{${messages.header.sections.about}}
 
-    ${messages.about.carrer.join('\\newline ')}
-    
-    \section{${messages.header.sections.experience}}
-    
-    \begin{twenty}${experience.map(exp => (
-`
-      \\twentyitem
-        {${formatDateRangeCV(new Date(exp.startDate), exp.endDate ? new Date(exp.endDate) : undefined, locale, messages)}}
-        {${getMultilingualContent(exp.title, locale)}}
-        {\\newline ${getMultilingualContent(exp.company, locale)}}
-        {
-        \\vspace{-3mm}
-        \\begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
-${getMultilingualContent(exp.keyPoints, locale).map(item => 
-`          \\item ${item}`).join("\n")}
-        \\end{itemize}
-        }`
-)).join("")}
-    \end{twenty}
+    ${careerParagraphs.join("\\newline ")}
+
+${experienceSection}
 
 %% end main section
 }
@@ -200,9 +271,7 @@ ${getMultilingualContent(exp.keyPoints, locale).map(item =>
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-${otherCategories.map(category => 
-`    ${makeCustomSkills(category)}`
-).join("\n")}
+${sideSkillsSecondary}
 
     \makefooterprofile{}
     
@@ -212,33 +281,16 @@ ${otherCategories.map(category =>
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for some reason there is no way to have a new line here...
 \mainsection{
-
-    \section{${messages.header.sections.education}}
-
-    \begin{twentymid}${education.map(ed => (
-`
-      \\twentyitem
-        {${formatDateRangeCV(new Date(ed.startDate), ed.endDate ? new Date(ed.endDate) : undefined, locale, messages)}}
-        {${getMultilingualContent(ed.title, locale)}}
-        {\\newline ${getMultilingualContent(ed.educator, locale)}}
-        {
-        \\vspace{-3mm}
-        \\begin{itemize}[leftmargin=5mm,noitemsep,topsep=0pt]
-${getMultilingualContent(ed.keyPoints, locale).map(item => 
-`          \\item ${item}`).join("\n")}
-        \\end{itemize}
-        }`
-      )).join("")}
-    \end{twentymid}   
+${educationSection}
 }
 \end{document}
 `;
 
-const filePath = `./cv/cv_${person.cvFileBase}_${locale}.tex`;
-try {
-  fs.writeFileSync(filePath, localizedTemplate, 'utf8');
-  console.log('File has been written to ' + filePath);
-} catch (err) {
-  console.error('Error writing file: ' + filePath, err);
-}
+  const filePath = `./cv/cv_${person.cvFileBase}_${locale}.tex`;
+  try {
+    fs.writeFileSync(filePath, localizedTemplate, "utf8");
+    console.log("File has been written to " + filePath);
+  } catch (err) {
+    console.error("Error writing file: " + filePath, err);
+  }
 }

@@ -14,6 +14,14 @@ export interface AboutContent {
   xing?: string;
   github?: string;
   mail: string;
+  metadata: {
+    title: MaybeMultilingualString;
+    description: MaybeMultilingualString;
+  };
+  about: {
+    career: MaybeMultilingualList;
+    myself: MaybeMultilingualString;
+  };
 }
 
 export interface ExperienceContent {
@@ -79,11 +87,11 @@ export interface PersonContent {
   cvFileBase: string;
   profileImage: string;
   about: AboutContent;
-  experience: ReadonlyArray<ExperienceContent>;
-  education: ReadonlyArray<EducationContent>;
-  projects: ReadonlyArray<ProjectContent>;
-  skills: ReadonlyArray<SkillContent>;
-  skillCategories: Readonly<Record<string, SkillCategoryContent>>;
+  experience?: ReadonlyArray<ExperienceContent>;
+  education?: ReadonlyArray<EducationContent>;
+  projects?: ReadonlyArray<ProjectContent>;
+  skills?: ReadonlyArray<SkillContent>;
+  skillCategories?: Readonly<Record<string, SkillCategoryContent>>;
   theme: ThemeConfig;
   contact: {
     formAction: string;
