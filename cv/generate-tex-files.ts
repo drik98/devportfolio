@@ -206,7 +206,7 @@ ${getMultilingualContent(ed.keyPoints, locale)
 \usepackage[shortlabels]{enumitem}
 
 \profilepic{${getCvProfileImageTexPath(person)}} % Profile picture
-\cvjobtitle{${messages.banner.jobTitle}} % Job title/career
+\cvjobtitle{${getMultilingualContent(about.jobTitle, locale)}} % Job title/career
 \cvname{${about.name}} % Your name
 
 %% Mandatory informations used by \makeinfoprofile. To hide these fields leave the contents of the macro empty (e.g. '\cvsitepersonal{}' instead than '\cvsitepersonal{en.wikipedia.org}')

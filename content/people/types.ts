@@ -22,6 +22,7 @@ export interface AboutContent {
     career: MaybeMultilingualList;
     myself: MaybeMultilingualString;
   };
+  jobTitle: MaybeMultilingualString;
 }
 
 export interface ExperienceContent {

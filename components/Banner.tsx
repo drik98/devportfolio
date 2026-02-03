@@ -1,4 +1,4 @@
-import { Locale, Messages } from "@/util/i18n";
+import { Locale, Messages, getMultilingualContent } from "@/util/i18n";
 import type { PersonContent } from "@/content/people/types";
 import styles from "./Banner.module.scss";
 
@@ -15,7 +15,7 @@ export default function Banner({
     <div className={styles.banner}>
       <div className={styles.bannerContent}>
         <h1>{person.about.name}</h1>
-        <h2>{messages.banner.jobTitle}</h2>
+        <h2>{getMultilingualContent(person.about.jobTitle, locale)}</h2>
         <a
           href={`/cv_${person.cvFileBase}_${locale}.pdf`}
           download={`cv-${person.cvFileBase}-${locale}.pdf`}
