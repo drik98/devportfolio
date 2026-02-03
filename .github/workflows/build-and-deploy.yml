@@ -3,6 +3,12 @@ on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        person:
+          - slug: hendrik
+            netlify_site_id: 11cf5515-4f97-4965-a552-6532b609d9f3
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -10,15 +16,17 @@ jobs:
         run: npm install
       - name: Generate localized LaTeX templates
         run: npm run generate-latex
+        env:
+          NEXT_PUBLIC_PERSON: ${{ matrix.person.slug }}
       - name: Upload generated LaTeX templates
         uses: actions/upload-artifact@v4
         with:
           name: latex-templates
-          path: cv/cv_hendrik_sieweck_*.tex
+          path: cv/cv_*_*.tex
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv/cv_hendrik_sieweck_*.tex
+          root_file: cv/cv_*_*.tex
           continue_on_error: "true"
         env:
           TEXINPUTS: ".:./cv//:"
@@ -26,13 +34,18 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cvs
-          path: cv_hendrik_sieweck_*.pdf
+          path: |
+            cv_*.pdf
+            cv/*.pdf
       - name: Copy generated pdf files to public directory
         run: |
           mkdir -p public
-          cp -R *.pdf public/
+          cp -R *.pdf public/ 2>/dev/null || true
+          cp -R cv/*.pdf public/ 2>/dev/null || true
       - name: Build Next.js app
         run: npm run build
+        env:
+          NEXT_PUBLIC_PERSON: ${{ matrix.person.slug }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
@@ -45,5 +58,5 @@ jobs:
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ matrix.person.netlify_site_id }}
         timeout-minutes: 1

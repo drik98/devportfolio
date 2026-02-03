@@ -1,26 +1,29 @@
-import Image from "next-export-optimize-images/image";
-import experience from "@/content/experience.json";
-import about from "@/content/about.json";
-import profilePic from "@/cv/profile_picture.jpg";
 import styles from "./About.module.scss";
 import { formatDate } from "@/util/date-time";
 import { Locale, Messages, getMultilingualContent } from "@/util/i18n";
-
-const birthDate = new Date(about.birthday);
-const currentDate = new Date();
-const difference = currentDate.getTime() - birthDate.getTime();
-const ageDate = new Date(difference);
-const currentAge = Math.abs(ageDate.getUTCFullYear() - 1970);
-
-const [currentJob] = experience;
+import type { AboutContent, ExperienceContent } from "@/content/people/types";
 
 export default function About({
   messages,
   locale,
+  about,
+  experience,
+  profileImage,
 }: {
   messages: Messages;
   locale: Locale;
+  about: AboutContent;
+  experience: ReadonlyArray<ExperienceContent>;
+  profileImage: string;
 }) {
+  const birthDate = new Date(about.birthday);
+  const currentDate = new Date();
+  const difference = currentDate.getTime() - birthDate.getTime();
+  const ageDate = new Date(difference);
+  const currentAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+  const [currentJob] = experience;
+
   const aboutMyself = messages.about.myself
     .replace("{currentAge}", String(currentAge))
     .replace(
@@ -36,9 +39,9 @@ export default function About({
         <div className={styles.aboutRow}>
           <div className="col-md-4">
             <h2 className="heading">{messages.header.sections.about}</h2>
-            <Image
+            <img
               className={styles.profilePicture}
-              src={profilePic}
+              src={profileImage}
               alt={about.name}
             />
           </div>

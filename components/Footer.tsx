@@ -1,9 +1,9 @@
-import about from "@/content/about.json";
+import type { AboutContent } from "@/content/people/types";
 import styles from "./Footer.module.scss";
 
 const currentYear = new Date().getFullYear();
 
-export default function Footer() {
+export default function Footer({ about }: { about: AboutContent }) {
   return (
     <footer className={styles.footer}>
       <div className="container">

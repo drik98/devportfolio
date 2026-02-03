@@ -38,3 +38,6 @@ next-env.d.ts
 # ignore generated latex and pdf files
 *.tex
 *.pdf
+
+# generated CV assets
+cv/people/**/profile_picture.jpg

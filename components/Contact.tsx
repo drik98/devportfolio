@@ -1,12 +1,18 @@
 import { Messages } from "@/util/i18n";
 import styles from "./Contact.module.scss";
 
-export default function Contact({ messages }: { messages: Messages }) {
+export default function Contact({
+  messages,
+  formAction,
+}: {
+  messages: Messages;
+  formAction: string;
+}) {
   return (
     <div id="contact" className={styles.contact}>
       <h2>{messages.header.sections.contact}</h2>
       <div className={styles.contactForm}>
-        <form method="POST" action="https://formspree.io/bewerbung@smtz.dev">
+        <form method="POST" action={formAction}>
           <input
             type="hidden"
             name="_subject"

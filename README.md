@@ -17,6 +17,12 @@ npm install
 npm run dev
 ```
 
+To switch the active person during development:
+
+```bash
+NEXT_PUBLIC_PERSON=anna npm run dev
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Publishing
@@ -28,6 +34,25 @@ You can preview the statically generated content manually using:
 npm run build
 npm run start
 ```
+
+## Multiple People
+
+Person-specific data lives under `content/people/<slug>/` and is wired up in `content/people/index.ts`.
+
+The active person is controlled via the `NEXT_PUBLIC_PERSON` env var (defaults to `hendrik`).
+Example:
+
+```bash
+NEXT_PUBLIC_PERSON=anna npm run build
+```
+
+To add another person:
+1. Create `content/people/<slug>/` and copy the JSON files from `content/people/hendrik/` as a starting point.
+2. Add assets:
+   - Website banner background: `public/people/<slug>/lead-bg.jpg`
+   - Website profile image: `public/people/<slug>/profile_picture.jpg`
+   - CV profile image: `cv/people/<slug>/profile_picture.jpg`
+3. Register the person in `content/people/index.ts` (slug, CV file base, contact form action, and theme colors).
 
 ## License
 

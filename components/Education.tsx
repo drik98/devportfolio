@@ -1,5 +1,4 @@
 import DetailedItem from "@/components/DetailedItem";
-import rawEducation from "@/content/education.json";
 import styles from "./Education.module.scss";
 import {
   Locale,
@@ -8,28 +7,31 @@ import {
   Messages,
   getMultilingualContent,
 } from "@/util/i18n";
-
-const education: EducationItem[] = rawEducation.map((item) => ({
-  educator: item.educator,
-  image: item.image,
-  keyPoints: item.keyPoints,
-  startDate: new Date(item.startDate),
-  title: item.title,
-  endDate: item.endDate ? new Date(item.endDate) : undefined,
-  url: item.url,
-}));
+import type { EducationContent } from "@/content/people/types";
 
 export default function Education({
   messages,
   locale,
+  education,
 }: {
   messages: Messages;
   locale: Locale;
+  education: ReadonlyArray<EducationContent>;
 }) {
+  const mappedEducation: EducationItem[] = education.map((item) => ({
+    educator: item.educator,
+    image: item.image,
+    keyPoints: item.keyPoints,
+    startDate: new Date(item.startDate),
+    title: item.title,
+    endDate: item.endDate ? new Date(item.endDate) : undefined,
+    url: item.url,
+  }));
+
   return (
     <div id="education" className={styles.education}>
       <h2 className="heading">{messages.header.sections.education}</h2>
-      {education.map((item) =>
+      {mappedEducation.map((item) =>
         EducationTimelineItem({ ...item, locale, messages })
       )}
     </div>

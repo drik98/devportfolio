@@ -35,19 +35,19 @@
 
   a {
     display: block;
-    color: #3498db;
+    color: var(--theme-primary);
     padding: 10px;
   }
 
   a:not(.localeLink):hover {
-    color: #217dbb;
+    color: var(--theme-primary-dark);
     text-decoration: none;
     background: #eee;
     border-radius: 4px;
   }
 
   a:focus {
-    color: #3498db;
+    color: var(--theme-primary);
     text-decoration: none;
   }
 }
@@ -62,7 +62,7 @@
   position: fixed;
   right: 15px;
   top: 10px;
-  color: #3498db;
+  color: var(--theme-primary);
   font-size: 1.5em;
   z-index: 20;
   padding: 0 7px;
@@ -79,7 +79,7 @@
   padding-right: 15px;
   padding-top: 10px;
   cursor: pointer;
-  color: #3498db;
+  color: var(--theme-primary);
 
   span {
     font-size: 0.5em;

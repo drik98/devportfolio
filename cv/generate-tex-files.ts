@@ -1,29 +1,56 @@
 import fs from 'fs';
-import about from "@/content/about.json"
-import experience from "@/content/experience.json" 
-import education from "@/content/education.json"
-import skills from "@/content/skills.json";
-import categories from "@/content/skill-categories.json";
+import path from 'path';
+import { getActivePerson } from "@/content/people/load";
+import type { PersonContent } from "@/content/people/types";
 import { formatDateRangeCV } from '@/util/date-time';
 import { Locale, getMessages, getMultilingualContent, supportedLocales } from '@/util/i18n';
 
 const SLASH_SEPARATOR_CHAR = "\\char`\\/";
 const sanitze = (value: string) => value.replaceAll("/", SLASH_SEPARATOR_CHAR).replaceAll("&", "\\&")
 
-const displayedSkills = skills.filter(skill => !skill.hideOnCv);
-
-for(const locale of supportedLocales) {
-  generateTemplate(locale);
+function getCvProfileImageTexPath(person: PersonContent) {
+  return path.posix.join("people", person.slug, "profile_picture.jpg");
 }
 
-async function generateTemplate(locale: Locale) {
+function getCvProfileImageFsPath(person: PersonContent) {
+  return path.join("cv", "people", person.slug, "profile_picture.jpg");
+}
+
+function ensureCvProfileImage(person: PersonContent) {
+  const cvImagePath = path.join(process.cwd(), getCvProfileImageFsPath(person));
+  const publicImagePath = path.join(
+    process.cwd(),
+    "public",
+    person.profileImage.replace(/^\//, "")
+  );
+
+  fs.mkdirSync(path.dirname(cvImagePath), { recursive: true });
+  fs.copyFileSync(publicImagePath, cvImagePath);
+}
+
+async function run() {
+  const activePerson = await getActivePerson();
+  ensureCvProfileImage(activePerson);
+  for (const locale of supportedLocales) {
+    await generateTemplate(activePerson, locale);
+  }
+}
+
+run().catch((error) => {
+  console.error("Failed to generate CV templates:", error);
+  process.exitCode = 1;
+});
+
+async function generateTemplate(person: PersonContent, locale: Locale) {
   const messages = await getMessages(locale);
+  const { about, experience, education, skills, skillCategories } = person;
+  const displayedSkills = skills.filter(skill => !skill.hideOnCv);
 
   const birthday = new Intl.DateTimeFormat(locale, {
     dateStyle: "long"
   }).format(new Date(about.birthday));
 
-  const skillCategories = Object.entries(categories)
+  const categorizedSkills = Object.entries(skillCategories)
     .map(([id, category]) => {
       return {
         ...category,
@@ -40,7 +67,7 @@ async function generateTemplate(locale: Locale) {
       }
     })
 
-    const [firstCategory, secondCategory, ...otherCategories] = skillCategories;
+    const [firstCategory, secondCategory, ...otherCategories] = categorizedSkills;
 
     const makeCustomSkills = (skillCategory: typeof firstCategory) => {
       const sortedSkills = skillCategory.skills.sort((a,b) => a.level - b.level)
@@ -89,7 +116,7 @@ async function generateTemplate(locale: Locale) {
 
 \usepackage[shortlabels]{enumitem}
 
-\profilepic{profile_picture.jpg} % Profile picture
+\profilepic{${getCvProfileImageTexPath(person)}} % Profile picture
 \cvjobtitle{${messages.banner.jobTitle}} % Job title/career
 \cvname{${about.name}} % Your name
 
@@ -207,7 +234,7 @@ ${getMultilingualContent(ed.keyPoints, locale).map(item =>
 \end{document}
 `;
 
-const filePath = `./cv/cv_${about.name.toLocaleLowerCase().split(/\s+/).join("_")}_${locale}.tex`;
+const filePath = `./cv/cv_${person.cvFileBase}_${locale}.tex`;
 try {
   fs.writeFileSync(filePath, localizedTemplate, 'utf8');
   console.log('File has been written to ' + filePath);
@@ -215,5 +242,3 @@ try {
   console.error('Error writing file: ' + filePath, err);
 }
 }
-
-

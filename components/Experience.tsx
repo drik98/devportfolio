@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import DetailedItem from "@/components/DetailedItem";
-import rawExperience from "@/content/experience.json";
 import { formatDateRange } from "@/util/date-time";
 import styles from "./Experience.module.scss";
 import {
@@ -10,24 +9,27 @@ import {
   Messages,
   getMultilingualContent,
 } from "@/util/i18n";
-
-const experiences: ExperienceItem[] = rawExperience.map((experience) => ({
-  company: experience.company,
-  image: experience.image,
-  keyPoints: experience.keyPoints,
-  startDate: new Date(experience.startDate),
-  title: experience.title,
-  endDate: experience.endDate ? new Date(experience.endDate) : undefined,
-  url: experience.url,
-}));
+import type { ExperienceContent } from "@/content/people/types";
 
 export default function ExperienceTimeline({
   messages,
   locale,
+  experience,
 }: {
   messages: Messages;
   locale: Locale;
+  experience: ReadonlyArray<ExperienceContent>;
 }) {
+  const experiences: ExperienceItem[] = experience.map((item) => ({
+    company: item.company,
+    image: item.image,
+    keyPoints: item.keyPoints,
+    startDate: new Date(item.startDate),
+    title: item.title,
+    endDate: item.endDate ? new Date(item.endDate) : undefined,
+    url: item.url,
+  }));
+
   return (
     <div id="experience" className={`background-alt ${styles.experience}`}>
       <h2 className="heading">{messages.header.sections.experience}</h2>

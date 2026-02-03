@@ -1,6 +1,3 @@
-import { StaticImageData } from "next/image";
-import Image from "next-export-optimize-images/image";
-import projects from "@/content/projects.json";
 import styles from "./Projects.module.scss";
 import {
   Locale,
@@ -8,13 +5,16 @@ import {
   Messages,
   getMultilingualContent,
 } from "@/util/i18n";
+import type { ProjectContent, ProjectTechnology } from "@/content/people/types";
 
 export default function Projects({
   messages,
   locale,
+  projects,
 }: {
   messages: Messages;
   locale: Locale;
+  projects: ReadonlyArray<ProjectContent>;
 }) {
   return (
     <div id="projects" className={`background-alt ${styles.projects}`}>
@@ -30,11 +30,7 @@ export default function Projects({
   );
 }
 
-interface Technology {
-  url: string;
-  image: StaticImageData | string;
-  name: string;
-}
+type Technology = ProjectTechnology;
 
 function ProjectItem({
   description,
@@ -47,10 +43,10 @@ function ProjectItem({
   locale,
 }: {
   description: MaybeMultilingualString;
-  image: StaticImageData | string;
+  image: string;
   projectUrl?: string;
   sourceCodeUrl?: string;
-  technologies: Technology[];
+  technologies: ReadonlyArray<Technology>;
   title: MaybeMultilingualString;
   messages: Messages;
   locale: Locale;
@@ -59,23 +55,13 @@ function ProjectItem({
   return (
     <div className={`shadow-large ${styles.project}`} key={translatedTitle}>
       <div className={styles.projectImage}>
-        {typeof image === "string" ? (
-          <img
-            src={image}
-            alt={messages.projects.altTextOfProjectPreview.replace(
-              "{project}",
-              translatedTitle
-            )}
-          />
-        ) : (
-          <Image
-            src={image}
-            alt={messages.projects.altTextOfProjectPreview.replace(
-              "{project}",
-              translatedTitle
-            )}
-          />
-        )}
+        <img
+          src={image}
+          alt={messages.projects.altTextOfProjectPreview.replace(
+            "{project}",
+            translatedTitle
+          )}
+        />
       </div>
 
       <div className={styles.projectInfo}>
@@ -105,7 +91,7 @@ function Technologies({
   technologies,
   messages,
 }: {
-  technologies: Technology[];
+  technologies: ReadonlyArray<Technology>;
   messages: Messages;
 }) {
   return (
@@ -125,27 +111,15 @@ function TechnologyItem({
 }: Technology & { messages: Messages }) {
   return (
     <a className={styles.projectLogoLink} href={url} key={name} target="_blank">
-      {typeof image === "string" ? (
-        <img
-          className={styles.projectLogoImage}
-          src={image}
-          alt={messages.projects.altTextOfTechnologyLogo.replace(
-            "{technology}",
-            name
-          )}
-          title={name}
-        />
-      ) : (
-        <Image
-          className={styles.projectLogoImage}
-          src={image}
-          alt={messages.projects.altTextOfTechnologyLogo.replace(
-            "{technology}",
-            name
-          )}
-          title={name}
-        />
-      )}
+      <img
+        className={styles.projectLogoImage}
+        src={image}
+        alt={messages.projects.altTextOfTechnologyLogo.replace(
+          "{technology}",
+          name
+        )}
+        title={name}
+      />
     </a>
   );
 }
